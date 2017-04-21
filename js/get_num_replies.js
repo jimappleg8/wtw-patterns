@@ -1,0 +1,1 @@
+// http://disqus.com/forums/worldthatworks/get_num_replies.js

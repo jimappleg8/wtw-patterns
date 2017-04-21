@@ -1,0 +1,47 @@
+-- URL is in the form of {URL_BASE, "yyyymmdd.html"
+
+set UrlBase to "http://dilbert.com/comics/dilbert/archive/dilbert-"
+set DayString to day of (current date)
+set MonthString to month of (current date) as number
+set YearString to year of (current date)
+
+--Add zero padding for days/months less than 10 (required URL format)
+if (DayString < 10) then set DayString to "0" & DayString
+if (MonthString < 10) then set MonthString to "0" & MonthString
+
+-- Set date portion of URL
+set dateString to YearString & MonthString & DayString as string
+
+-- Set complete URL
+set UrlAddr to UrlBase & dateString & ".html" as string
+
+-- Open the URL in Firefox
+tell application "Firefox"
+	Get URL UrlAddr
+end tell
+
+-- Activate Firefox
+activate application "Firefox"
+
+-- Print out
+PrintFireFox()
+
+
+-- Here was the tricky part.  You have to tell 'System Events' to tell 'Firefox' to make a series of clicks.
+-- This is based on UI Scripting.  
+on PrintFireFox()
+	tell application "System Events"
+		tell process "Firefox"
+			delay 3
+			click menu item "Print..." of menu "File" of menu bar 1
+			delay 1
+			click pop up button 2 of window "Print"
+			delay 1
+			click menu item "my_print_preset" of menu 1 of pop up button 2 of window "Print"
+			delay 1
+			key down return
+			delay 1
+			key up return
+		end tell
+	end tell
+end PrintFireFox

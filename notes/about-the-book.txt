@@ -1,0 +1,65 @@
+About the Book
+--------------
+
+This is as much for me as it is for the potential reader. I have a certain amount of clarity about how the book is (should be) structured, and I want to write those ideas down for those time when I am not so clear.
+
+The book is divided into three sections. This was originally to mirror the structure of Christopher Alexander's _Pattern Language_, which is, of course, a terrible reason to structure the book that way. Over time the three sections have come to represent three aspects of a process that I am trying to affect as described below.
+
+----
+
+A Better World
+
+Many people talk about making the World a better place. I think this is a basic drive that we have to create a place for our children that will allow them to be safe and thrive. It turns out that defining exactly what we mean by "a better place" and determining how to go about creating it are difficult things to do. I call my concept of a better world "World that Works".
+
+Broadly, I define a World that Works as one in which all humanity enjoys full lasting economic and physical success with no individual interfering with or benefiting at the expense of another or the planet. This is a simplified version a statement that Buckminster Fuller wrote entitled "What I Am Trying to Do":
+
+	"Acutely aware of our beings' limitations and acknowledging the infinite mystery of the a priori universe into which we are born, but nevertheless searching for a conscious means of hopefully competent participation by humanity in its own evolutionary trending while employing only the unique advantages inhering exclusively to the individual who takes and maintains the economic initiative in the face of the formidable physical capital and credit advantages of the massive corporations and political states and deliberately avoiding political ties and tactics while endeavoring by experiments and explorations to excite individuals' awareness and realization of humanity's higher potentials I seek through Comprehensive Anticipatory Design Science and its reductions to physical practices to reform the environment instead of trying to reform men being intent thereby to accomplish prototyped capabilities of doing more with less whereby in turn the wealth augmenting prospects of such design science regenerations will induce their spontaneous and economically successful industrial proliferation by world around services' managements all of which chain reaction provoking events will both permit and induce all humanity to realize full lasting economic and physical success plus enjoyment of all the Earth without one individual interfering with or being advantaged at the expense of another."
+
+  	—— R. Buckminster Fuller, Aboard our 1,000-miles-per-minute speeding Spaceship Earth within the outer reaches of the cosmically spiraling and expanding Milky Way, the Galactic Nebula. Modified from 152 to 200 words at the location on Spaceship Earth where the first man-made atomic explosion occurred: Alamogordo.RBF
+
+This book was inspired by my attempts to unpack and understand this statement by Fuller. I have, however, attempted to go beyond these words and answer the question that arises pretty quickly from much of Fuller's writing: "how the heck do you do that?"
+
+
+The Changing World
+
+The human-created World (as distinct from the natural systems of Earth) can be seen as a complex construct that is subject to the forces of natural selection. Over millennia, the World has evolved to where it is today through a combination of random events and direct human intervention. It might seem odd that a human invention such as the World could be subject to forces that are outside human control, but we have to remember that there are many humans and there is no one human or group of humans directing the design of the World. It is a complex system and it behaves in ways that are unpredicted by the behaviors of it's individual components.
+	
+Nonetheless, humans have the unique ability to actively participant in the evolution of the World. In many ways the evolution of the World is tied to the evolution of ourselves as a species, which means that we have the ability to actively participant in our own evolution. As we change, the World changes and as the World changes, so we change. This process is something that Fuller called "teleology" and can be broken down into a three phase cyclical process:
+	
+	1. We experience and internalize the World around us, creating an internal model of the World that we use to function within it.
+		
+	2. We compare our internal model of the World to what we would like it to be, and imagine changes we could make to bring the reality of the World closer to our ideal. This can be thought of as the process of design.
+		
+	3. We create the changes that we envision by rearranging the physical World in our preferred ways. We write books, build machines, have conversations with other people, or any of the many other ways we affect the World around us. The slightly modified World we create becomes the foundation that we and others use back in phase 1, and the process repeats.
+	
+We are all part of this process and at each phase we participate with varying degrees of insight, intention and effectiveness. Sometimes we understand what we are doing, but much of the time, we are not conscious of the effects we are having.
+
+This book is nothing less than an attempt to nudge this process in a direction that ultimately results in a "World That Works".
+
+
+How the Book is Organized
+
+The book is divided into three sections, each of which is intended to illuminate one or more phases of the process described above. The first section defines in more detail what we mean by "World That Works"; the second section talks about the important process of interpreting and internallizing the World around us and creating an accurate internal model; and the third section goes into more detail about the process of creating effective changes in the World.
+
+	Section 1: What I mean by 'World That Works'.
+
+	I have described this section as trying to show what a World That Works looks like, and that is true except that it needs clarification. It is not an attempt to predict the future and list the specific artifacts that will make up a future World That Works. That would be too limiting and would narrow the focus of the book to a specific agenda instead of leaving room for innovation. Rather, this section attempts to outline the effects that future artifacts should have if they are to help create a World that is indeed Working for more (and ideally, all) people.
+	
+	In other words, how will we will know if we succeed? Well, the World will have certain properties, and this first section is an attempt to define those properties in a way that makes it clear how they might be measured. Just as we have devised a whole series of economic indicators to give us a snapshot of how the economy is doing, these are the beginnings of a set of World That Works indicators to tell us how well the world is working.
+	
+	Section 2: The Individual
+
+	Fuller talked about unity being at a minimum two. In the case of this book, that unity is the relationship between the individual and the World. It is the individual perceiving, interpreting, and thinking about the World that will shape our future. That is a given. But to be the most effective at creating a World That Works, the individual needs to perceive, interpret and think in preferred ways.
+	
+	At the heart of this section is the idea that the individual embodies a model of Universe. The more accurately that model represents Universe, the more effective that individual will be in affecting Universe in the ways he or she intends. 
+
+	Over millennia, humans have been slowly learning the limits of our minds and devising ways to overcome them in our effort to survive and thrive within Earth's natural systems. This section attempts to outline what we have learned so far about the most effective patterns of thinking so that we can create a more accurate model of Universe within ourselves.
+	
+	Section 3: The Art of Comprehensive Thinking
+
+	The third section of the book tries to outline the ways in which we can participate more effectively in the evoluton of the World to intentionally move it in the direction of a World That Works. 
+	
+	This process -- interpreting, designing and building with the intention of creating a World That Works -- is what Fuller called "Comprehensive Anticipatory Design Science", but I prefer to shorten that to "Comprehensive Thinking." I can justify that by taking a very broad view of what constitutes thinking and treating things like scientific experimentation, prototype construction and trend analysis as forms of thought.
+	
+
+	

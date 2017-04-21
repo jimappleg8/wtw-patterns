@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BBEditDocumentType</key>
+	<string>TextTransform</string>
+	<key>TextTransformComponents</key>
+	<array>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>CaseSensitive</key>
+				<false/>
+				<key>MatchWords</key>
+				<false/>
+				<key>ReplaceString</key>
+				<string>/js/embed.js</string>
+				<key>SearchString</key>
+				<string>http://disqus.com/forums/worldthatworks/embed.js</string>
+				<key>UseGrep</key>
+				<false/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ReplaceAll</string>
+		</dict>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>CaseSensitive</key>
+				<false/>
+				<key>MatchWords</key>
+				<false/>
+				<key>ReplaceString</key>
+				<string>/js/get_num_replies.js</string>
+				<key>SearchString</key>
+				<string>http://disqus.com/forums/worldthatworks/get_num_replies.js</string>
+				<key>UseGrep</key>
+				<false/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ReplaceAll</string>
+		</dict>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>CaseSensitive</key>
+				<false/>
+				<key>MatchWords</key>
+				<false/>
+				<key>ReplaceString</key>
+				<string>/* web */ /*</string>
+				<key>SearchString</key>
+				<string>/* web */</string>
+				<key>UseGrep</key>
+				<false/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ReplaceAll</string>
+		</dict>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>CaseSensitive</key>
+				<false/>
+				<key>MatchWords</key>
+				<false/>
+				<key>ReplaceString</key>
+				<string>*/ /* end web */</string>
+				<key>SearchString</key>
+				<string>/* end web */</string>
+				<key>UseGrep</key>
+				<false/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ReplaceAll</string>
+		</dict>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>CaseSensitive</key>
+				<false/>
+				<key>MatchWords</key>
+				<false/>
+				<key>ReplaceString</key>
+				<string>/* acrobat */</string>
+				<key>SearchString</key>
+				<string>/* acrobat */ /*</string>
+				<key>UseGrep</key>
+				<false/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ReplaceAll</string>
+		</dict>
+		<dict>
+			<key>ComponentArguments</key>
+			<dict>
+				<key>CaseSensitive</key>
+				<false/>
+				<key>MatchWords</key>
+				<false/>
+				<key>ReplaceString</key>
+				<string>/* end acrobat */</string>
+				<key>SearchString</key>
+				<string>*/ /* end acrobat */</string>
+				<key>UseGrep</key>
+				<false/>
+			</dict>
+			<key>ComponentName</key>
+			<string>ReplaceAll</string>
+		</dict>
+	</array>
+	<key>TextTransformOptions</key>
+	<dict>
+		<key>EnableFileFilter</key>
+		<false/>
+		<key>SaveMode</key>
+		<string>yes </string>
+		<key>SearchInvisibles</key>
+		<false/>
+		<key>SearchRecursive</key>
+		<true/>
+		<key>SkipShielded</key>
+		<false/>
+		<key>TextFilesOnly</key>
+		<true/>
+	</dict>
+	<key>TextTransformSources</key>
+	<array>
+		<dict>
+			<key>SourceNodeData</key>
+			<string>file://localhost/Users/japplega/Desktop/patterns/</string>
+			<key>SourceNodeType</key>
+			<string>Folder</string>
+		</dict>
+	</array>
+</dict>
+</plist>

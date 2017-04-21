@@ -1,0 +1,60 @@
+
+@page { size:8.5in 11in; margin:1in; }
+
+/* --------------------------------------------------------
+   Drupal look
+   --------------------------------------------------------- */
+
+#primary { display:none; }
+#header { display:none; }
+#site-name { display:none; }
+#site-slogan { display:none; }
+
+
+/* --------------------------------------------------------
+   Patterns
+   --------------------------------------------------------- */
+
+#masthead { border-bottom:1px solid #999; }
+
+.footnotes { border:1px solid #999; padding:12px; }
+
+.counter { border:1px solid #999; padding:12px; }
+
+.notes { border:1px solid #999; padding:12px; }
+
+
+/* --------------------------------------------------------
+   Tabs
+   --------------------------------------------------------- */
+
+.tabberlive .tabbertabhide { display:inline; }
+.tabber {  }
+.tabberlive {  }
+ul.tabbernav { display:none; }
+ul.tabbernav li {  }
+ul.tabbernav li a {  }
+ul.tabbernav li a:link {  } 
+ul.tabbernav li a:visited {  }
+ul.tabbernav li a:hover {  }
+ul.tabbernav li.tabberactive a {  }
+ul.tabbernav li.tabberactive a:hover {  }
+.tabberlive .tabbertab { display:inline; border:0; }
+
+
+/* --------------------------------------------------------
+   Comments
+   --------------------------------------------------------- */
+
+#disqus-thread {  }
+#dsq-content {  }
+#dsq-auth { display:none; }
+#dsq-toolbar-items { display:none; }
+#dsq-post-add { display:none; }
+#dsq-options { display:none; }
+#dsq-alerts { display:none; }
+#dsq-comments-count span.dsq-item-feed { display:none; }
+#dsq-comments {  }
+#dsq-comments ul.dsq-list-style { display:none; }
+.dsq-item-trackback { display:none; }
+.dsq-brlink { display:none; }

@@ -1,0 +1,2613 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class directory_info</title>
+<style type="text/css">
+a { color: #0000FF; text-decoration: none; }
+a:hover { color: #FF0000; text-decoration: underline; }
+a:active { color: #FF0000; text-decoration: underline; }
+
+body { background-color: #EEEEEE; font-family: Verdana, Arial, sans-serif }
+body, table { font-size: 10pt }
+a img { border: 0px; }
+dd { margin-left: 0px; padding-left: 1em; }
+
+/* Page layout/boxes */
+
+.info-box {}
+.info-box-title { margin: 1em 0em 0em 0em; padding: .25em; font-weight: normal; font-size: 14pt; border: 2px solid #999999; background-color: #DDDDDD }
+.info-box-body { border: 1px solid #999999; padding: .5em; background-color: #F8F8F8; }
+.nav-bar { font-size: 8pt; white-space: nowrap; text-align: right; padding: .2em; margin: 0em 0em 1em 0em; }
+
+.oddrow { background-color: #DDDDDD; border: 1px solid #999999; padding: .5em; margin-bottom: 1em}
+.evenrow { background-color: #DDDDDD; border: 1px solid #999999; padding: .5em; margin-bottom: 1em}
+
+.page-body { max-width: 800px; margin: auto; }
+.tree dl { margin: 0px }
+
+/* Index formatting classes */
+
+.index-item-body { margin-top: .5em; margin-bottom: .5em}
+.index-item-description { margin-top: .25em }
+.index-item-details { font-weight: normal; font-style: italic; font-size: 8pt }
+.index-letter-section { background-color: #EEEEEE; border: 1px dotted #999999; padding: .5em; margin-bottom: 1em}
+.index-letter-title { font-size: 12pt; font-weight: bold }
+.index-letter-menu { text-align: center; margin: 1em }
+.index-letter { font-size: 12pt }
+
+/* Docbook classes */
+
+.description {}
+.short-description { font-weight: bold; color: #666666; }
+.tags {	padding-left: 0em; margin-left: 3em; color: #666666; list-style-type: square; }
+.parameters {	padding-left: 0em; margin-left: 3em; font-style: italic; list-style-type: square; }
+.redefinitions { font-size: 8pt; padding-left: 0em; margin-left: 2em; }
+.package {  }
+.package-title { font-weight: bold; font-size: 14pt; border-bottom: 1px solid black }
+.package-details { font-size: 85%; }
+.sub-package { font-weight: bold; font-size: 120% }
+.tutorial { border-width: thin; border-color: #0066ff }
+.tutorial-nav-box { width: 100%; border: 2px solid #999999; background-color: #DDDDDD }
+.nav-button-disabled { color: #999999; }
+.nav-button:active, 
+.nav-button:focus, 
+.nav-button:hover { background-color: #AAAAAA; outline: 1px solid #666666; text-decoration: none }
+.folder-title { font-style: italic }
+
+/* Generic formatting */
+
+.field { font-weight: bold; }
+.detail { font-size: 8pt; }
+.notes { font-style: italic; font-size: 8pt; }
+.separator { background-color: #999999; height: 2px; }
+.warning {  color: #FF6600; }
+.disabled { font-style: italic; color: #999999; }
+
+/* Code elements */
+
+.line-number {  }
+
+.class-table { width: 100%; }
+.class-table-header { border-bottom: 1px dotted #666666; text-align: left}
+.class-name { color: #000000; font-weight: bold; }
+
+.method-summary { padding-left: 1em; font-size: 8pt }
+.method-header { }
+.method-definition { margin-bottom: .3em }
+.method-title { font-weight: bold; }
+.method-name { font-weight: bold; }
+.method-signature { font-size: 85%; color: #0066BB; margin: .5em 0em }
+.method-result { font-style: italic; }
+
+.var-summary { padding-left: 1em; font-size: 8pt; }
+.var-header { }
+.var-title { margin-bottom: .3em }
+.var-type { color: red; font-weight: bold }
+.var-name { font-weight: bold; }
+.var-default {}
+.var-description { font-weight: normal; color: #000000; }
+
+.include-title {  }
+.include-type { font-style: italic; }
+.include-name { font-weight: bold; }
+
+.const-title {  }
+.const-name { font-weight: bold; }
+
+/* Syntax highlighting */
+
+.src-code {  border: 1px solid #336699; padding: 1em; background-color: #EEEEEE; }
+*[class="src-code"], *[class="listing"], *[class="example"] { line-height : 0.5em }
+
+.src-comm { color: #666666; }
+.src-id {  }
+.src-inc { color: #0000FF; }
+.src-key { color: #0000FF; }
+.src-num { color: #CC0000; }
+.src-str { color: #66cccc; }
+.src-sym { font-weight: bold; }
+.src-var { }
+
+.src-php { font-weight: bold; }
+
+.src-doc { color: #009999 }
+.src-doc-close-template { color: #0000FF }
+.src-doc-coretag { color: #0099FF; font-weight: bold }
+.src-doc-inlinetag { color: #0099FF }
+.src-doc-internal { color: #6699cc }
+.src-doc-tag { color: #0080CC }
+.src-doc-template { color: #0000FF }
+.src-doc-type { font-style: italic }
+.src-doc-var { font-style: italic }
+
+.tute-tag { color: #009999 }
+.tute-attribute-name { color: #0000FF }
+.tute-attribute-value { color: #0099FF }
+.tute-entity { font-weight: bold; }
+.tute-comment { font-style: italic }
+.tute-inline-tag { color: #636311; font-weight: bold }
+
+/* tutorial */
+
+.authors {  }
+.author { font-style: italic; font-weight: bold }
+.author-blurb { margin: .5em 0em .5em 2em; font-size: 85%; font-weight: normal; font-style: normal }
+.example { background-color: #DDDDDD; border: 1px solid #999999; padding: .5em; }
+.listing { background-color: #DDDDDD; border: 1px solid #999999; padding: .5em; white-space: nowrap; }
+.release-info { font-size: 85%; font-style: italic; margin: 1em 0em }
+.ref-title-box {  }
+.ref-title {  }
+.ref-purpose { font-style: italic; color: #666666 }
+.ref-synopsis {  }
+.title { font-weight: bold; border-bottom: 1px solid #888888; color: #888888;  }
+.cmd-synopsis { margin: 1em 0em }
+.cmd-title { font-weight: bold }
+.toc { margin-left: 2em; padding-left: 0em }
+</style>
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		<script type="text/javascript" src="../../js/tabber.js" />
+
+<script type="text/javascript">
+
+   var disqus_developer = 1; 
+
+</script> 
+
+</head>
+		<body>
+
+<div id="primary">
+<ul class="links"><li class="menu-285 active-trail first active"><a href="/" title="" class="active">Home</a></li>
+<li class="menu-782"><a href="/content/about-jim-applegate" title="">About Me</a></li>
+<li class="menu-446 last"><a href="/content/celestial-seasonings" title="Celestial Seasonings">Portfolio</a></li>
+</ul>
+</div>
+
+<div id="page"><div id="page-inner">
+
+   <a name="top" id="navigation-top"></a>
+
+   <div id="header"><div id="header-inner" class="clear-block">
+
+      
+      <h1 id="site-name"><a href="/" title="Home" rel="home">World that Works                </a></h1>
+                      
+      <div id="site-slogan">A world view from the mind of Jim Applegate</div>  
+      
+   </div></div> <!-- /#header-inner, /#header -->
+			<div class="page-body">			
+<h2 class="class-name">Class directory_info</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generic (re-usable) class to retrieve information on files / directories</p>
+<p class="description"><p>Class which can retrieve information on files, sub-directories and files within  sub-directories.</p><p>You can retrieve various kinds of lists with filenames as well as retrieve information  about individual files, such as the file-size, file-last-access-date, file-last-modified-date  and more.</p><p>The class defaults to image files only, but based on the parameters you pass,  information on any type of file can be retrieved.</p><p>*********************************************************************<br />  <strong>Features</strong><br />  *********************************************************************</p><p><ul><li>Generate a filelist / directory list as an array</li><li>Include subdirectories / files within subdirectories ($recursion = true)</li><li>Create a selection within the generated filelist based on:<br />
+ 			* file extension(s)<br />
+ 			* file extension(s) + mimetype check<br />
+ 			* last modified date<br />
+ 			* last access date</li><li>Create a selection within an earlier made selection</li><li>Sort the filelist</li><li>Find out which is the most recently changed file + the timestamp</li><li>Find out the directory size of<br />
+ 			* a directory<br />
+ 			* a directory and all subdirectories within it<br />
+ 			* a selection of files within a directory<br />
+ 			* same but then including selected files in subdirectories</li><li>Check whether the file extension of a file is within an allowed list (defaults to image files)</li><li>Check whether the mime-type of a file is within an allowed list (defaults to image files)</li><li>Combine the above two checks</li><li>Get information on individual files:<br />
+ 			* filesize (optionally in a human readable format)<br />
+ 			* last modified date (optionally in a - self-defined - human readable format)<br />
+ 			* last access date (optionally in a - self-defined - human readable format)<br />
+ 			* file permissions in a human readable format<br />
+ 			* file owner id<br />
+ 			* mime-type</li><li>Change an arbitrary filesize to a human readable format</li></ul>  *********************************************************************<br />  <strong>Basics on how to use the class</strong><br />  *********************************************************************</p><p><em>How to instantiate ?</em>  <pre><ol><code><pre><li><span class="src-php">&lt;?php</span></li>
+<li> <span class="src-var">$dirobj </span>= <span class="src-key">new </span><span class="src-id">directory_info</span><span class="src-sym">( </span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> <span class="src-php">?&gt;</span></li>
+</pre></code></ol></pre></p><p><em>How to view the results ?</em><br />  You can format the results display yourself, to quickly retrieve and view a filelist, you can use:  <pre><ol><code><pre><li><span class="src-php">&lt;?php</span></li>
+<li> <span class="src-comm">// Get a filelist for $pathtodir, $recursion = true,</span></li>
+<li><span class="src-comm">// don't use a previously made selection (null)</span></li>
+<li> </li>
+<li> <span class="src-var">$dirobj</span><span class="src-sym">-&gt;</span><a href="#methodget_filelist">get_filelist</a><span class="src-sym">( </span><span class="src-id">null</span><span class="src-sym">, </span><span class="src-var">$pathtodir</span><span class="src-sym">, </span><span class="src-id">true </span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> print <span class="src-str">'filecount is : ' </span>. <span class="src-var">$dirobj</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="#var$filecount">filecount</a></span><span class="src-sym">;</span></li>
+<li> print <span class="src-str">'&lt;pre&gt;'</span><span class="src-sym">;</span></li>
+<li> <a href="http://www.php.net/print_r">print_r</a><span class="src-sym">( </span><span class="src-var">$dirobj</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="#var$filelist">filelist</a> </span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li> print <span class="src-str">'&lt;/pre&gt;'</span><span class="src-sym">;</span></li>
+<li> <span class="src-php">?&gt;</span></li>
+</pre></code></ol></pre></p><p><em>Note</em>: The directory path passed to a methods should be relative to the location  of the calling file and should end with a trailing slash  <pre><ol><code><pre><li><span class="src-php">&lt;?php</span></li>
+<li> <span class="src-var">$pathtodir </span>= <span class="src-str">'images/'</span><span class="src-sym">;</span></li>
+<li> <span class="src-php">?&gt;</span></li>
+</pre></code></ol></pre></p><p><strong>For more extended examples of how to use this class, have a look at the example file which came
+ with this class. It should be located in /example/example.php</strong></p><p>*********************************************************************<br />  <strong>Version management information</strong><br />  *********************************************************************</p><p><ul><li>v1.5 2006-09-02<br />
+ 			- Improved inline documentation to work with <a href="http://www.phpdoc.org/">phpDocumentor</a>
+             and updated the example file<br />
+             - Created separate methods to set the class variables and moved the main filelist get
+             functionality out of the class instantiation<br />
+             - Created various methods for retrieving selections of a filelist
+             - Adjusted the methods to auto-re-use or auto-destroy the previous retrieved
+             results so you can keep re-using the (instantiated) class<br />
+             - Made a lot of file related methods static, i.e. callable without instantiating
+             the class<br />
+             - Added lots of new methods</li><li>v1.4 2006-07-04<br />
+             - Added filecount variable</li><li>v1.3 2005-12-24<br />
+             - Added support for uppercase filenames and uppercase extensions passed</li><li>v1.2 2005-12-05<br />
+             - Rewrite of function to class to improve re-usability<br />
+            - Added filesize option</li><li>v1.0 2004-07-15<br />
+             - Originally posted as a function to the comments section
+             of <a href="http://www.php.net/function.readdir">http://www.php.net/function.readdir</a></li></ul>  *********************************************************************</p></p>
+	<ul class="tags">
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/academic">Academic Free License Version 1.2</a></li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/lgpl-license.php">GNU Lesser General Public License</a></li>
+				<li><span class="field">example:</span> <a href="example.php">example</a></li>
+				<li><span class="field">copyright:</span> Advies en zo, Meedenken en -doen ©2004-2006</li>
+				<li><span class="field">since:</span> 2006-09-02 // Last changed: by Juliette Reinders Folmer</li>
+				<li><span class="field">todo:</span> Check whether the $pathtofile checks can be removed</li>
+				<li><span class="field">version:</span> 1.5</li>
+				<li><span class="field">author:</span> Juliette Reinders Folmer, <a href="http://www.adviesenzo.nl/">Advies en zo</a> -   &lt;<a href="mailto:getdirectorylist@adviesenzo.nl">getdirectorylist@adviesenzo.nl</a>&gt;</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="directoryinfo.inc.php">/directoryinfo.inc.php</a> (line <span class="field">125</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$datetime_format" title="details" class="var-name">$datetime_format</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">int</span>
+					<a href="#$dircount" title="details" class="var-name">$dircount</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$dirlist" title="details" class="var-name">$dirlist</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array|string</span>
+					<a href="#$exts" title="details" class="var-name">$exts</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">int</span>
+					<a href="#$filecount" title="details" class="var-name">$filecount</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$filelist" title="details" class="var-name">$filelist</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$filelist_selection" title="details" class="var-name">$filelist_selection</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">int</span>
+					<a href="#$fileselection_count" title="details" class="var-name">$fileselection_count</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array|string</span>
+					<a href="#$last_exts" title="details" class="var-name">$last_exts</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$last_mimetypes" title="details" class="var-name">$last_mimetypes</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array|string</span>
+					<a href="#$last_passed_exts" title="details" class="var-name">$last_passed_exts</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$last_passed_mimetypes" title="details" class="var-name">$last_passed_mimetypes</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$last_path" title="details" class="var-name">$last_path</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$last_recursive" title="details" class="var-name">$last_recursive</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$mimetypes" title="details" class="var-name">$mimetypes</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$mime_map" title="details" class="var-name">$mime_map</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$pathtodir" title="details" class="var-name">$pathtodir</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">bool</span>
+					<a href="#$safe_exts" title="details" class="var-name">$safe_exts</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">boolean</span>
+					<a href="#$strict" title="details" class="var-name">$strict</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$valid_mime_types" title="details" class="var-name">$valid_mime_types</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#check_allowed_file" title="details" class="method-name">check_allowed_file</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>, [<span class="var-type">array|string</span>&nbsp;<span class="var-name">$exts</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$mimetypes</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#check_file_extension" title="details" class="method-name">check_file_extension</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">array|string</span>&nbsp;<span class="var-name">$exts</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#check_file_mimetype" title="details" class="method-name">check_file_mimetype</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$mimetypes</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#get_dirsize" title="details" class="method-name">get_dirsize</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_dir_list" title="details" class="method-name">get_dir_list</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_ext_based_filelist" title="details" class="method-name">get_ext_based_filelist</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>], [<span class="var-type">array|string</span>&nbsp;<span class="var-name">$exts</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$mimetypes</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_filelist" title="details" class="method-name">get_filelist</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">int|false</span>
+										<a href="#get_filesize" title="details" class="method-name">get_filesize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_files_accessed_before" title="details" class="method-name">get_files_accessed_before</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$compare_ts</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_files_accessed_since" title="details" class="method-name">get_files_accessed_since</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$compare_ts</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_files_modified_before" title="details" class="method-name">get_files_modified_before</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$compare_ts</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_files_modified_since" title="details" class="method-name">get_files_modified_since</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$compare_ts</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">int|false</span>
+										<a href="#get_file_owner" title="details" class="method-name">get_file_owner</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_human_readable_dirsize" title="details" class="method-name">get_human_readable_dirsize</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string|false</span>
+										<a href="#get_human_readable_filesize" title="details" class="method-name">get_human_readable_filesize</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string|false</span>
+										<a href="#get_human_readable_file_permissions" title="details" class="method-name">get_human_readable_file_permissions</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string|false</span>
+										<a href="#get_human_readable_lastacc" title="details" class="method-name">get_human_readable_lastacc</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$datetime_format</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string|false</span>
+										<a href="#get_human_readable_lastmod" title="details" class="method-name">get_human_readable_lastmod</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$datetime_format</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">int|false</span>
+										<a href="#get_lastacc_unixts" title="details" class="method-name">get_lastacc_unixts</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">int|false</span>
+										<a href="#get_lastmod_unixts" title="details" class="method-name">get_lastmod_unixts</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string|false</span>
+										<a href="#get_mime_content_type" title="details" class="method-name">get_mime_content_type</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_most_recent_file" title="details" class="method-name">get_most_recent_file</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_sorted_dirlist" title="details" class="method-name">get_sorted_dirlist</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$sort_asc</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_sorted_filelist" title="details" class="method-name">get_sorted_filelist</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$sort_asc</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string|false</span>
+										<a href="#human_readable_filesize" title="details" class="method-name">human_readable_filesize</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$filesize</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#set_datetime_format" title="details" class="method-name">set_datetime_format</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$datetime_format</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#set_default_exts" title="details" class="method-name">set_default_exts</a>
+											(<span class="var-type">array|string</span>&nbsp;<span class="var-name">$exts</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#set_default_mimetypes" title="details" class="method-name">set_default_mimetypes</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$mimetypes</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#set_default_path" title="details" class="method-name">set_default_path</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#set_safe_exts" title="details" class="method-name">set_safe_exts</a>
+											(<span class="var-type">bool</span>&nbsp;<span class="var-name">$safe_exts</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#set_strict" title="details" class="method-name">set_strict</a>
+											(<span class="var-type">bool</span>&nbsp;<span class="var-name">$strict</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#valid_pathtofile" title="details" class="method-name">valid_pathtofile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$datetime_format" id="$datetime_format"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$datetime_format</span>
+			 = <span class="var-default"> 'Y-m-d H:i:s'</span>			(line <span class="line-number">216</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default format string for the human readable last modified and last access date</p>
+<p class="description"><p><ul><li>Refer to the <a href="http://www.php.net/function.date">php documentation</a> for information
+             on formatting strings available.</li><li>If set to an empty string, the <a href="#methodget_human_readable_lastacc">get_human_readable_lastacc()</a> and
+             <a href="#methodget_human_readable_lastmod">get_human_readable_lastmod()</a> methods will return an
+             unformatted unix timestamp.</li><li>Defaults to <em>Y-m-d H:i:s</em> which should display something like <em>2006-08-31 00:00:00</em></li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_lastacc">directory_info::get_human_readable_lastacc()</a> - as a default date/time format if no format was passed</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_lastmod">directory_info::get_human_readable_lastmod()</a> - as a default date/time format if no format was passed</li>
+				<li><span class="field">usedby:</span> <a href="#methodset_datetime_format">directory_info::set_datetime_format()</a> - to store new default</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.date">http://www.php.net/function.date</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$dircount" id="$dircount"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$dircount</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">289</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Directory count result variable</p>
+<p class="description"><p>Count of number of directories in <a href="#var$dirlist">$dirlist</a></p></p>
+	
+	
+		
+		
+
+</div>
+<a name="var$dirlist" id="$dirlist"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$dirlist</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">265</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Directory result array</p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_dir_list">directory_info::get_dir_list()</a> - to return the list as stored by traverse_directory
+                             now or earlier</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$exts" id="$exts"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array|string</span>
+			<span class="var-name">$exts</span>
+			 = <span class="var-default">array( 'jpg', 'gif', 'jpeg', 'png' )</span>			(line <span class="line-number">168</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of file extensions</p>
+<p class="description"><p>The list is used to determine which files should be included in the result array if you want  to make a selection based on file extensions <ul><li>Should be an array of file extensions to show only files which comply with these extensions</li><li>Alternatively, the special string-value <em>all</em> will show files independent
+ 			of extensions.</li><li>Defaults to typical image file extensions (jpg, gif, jpeg, png)</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodset_default_exts">directory_info::set_default_exts()</a> - to store new default</li>
+				<li><span class="field">see:</span> <a href="#methodcheck_allowed_file">directory_info::check_allowed_file()</a></li>
+				<li><span class="field">see:</span> <a href="#methodcheck_file_extension">directory_info::check_file_extension()</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filecount" id="$filecount"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$filecount</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">273</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File count result variable</p>
+<p class="description"><p>Count of number of files in <a href="#var$filelist">$filelist</a></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to check that $filelist contains results if the requested list
+                             already seemed to exist</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filelist" id="$filelist"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$filelist</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">251</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filelist result array</p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to return the list as stored by traverse_directory
+                             now or earlier</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filelist_selection" id="$filelist_selection"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$filelist_selection</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">258</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Filelist selection result array</p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_files_accessed_since">directory_info::get_files_accessed_since()</a> - to store the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_accessed_before">directory_info::get_files_accessed_before()</a> - to store the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_modified_before">directory_info::get_files_modified_before()</a> - to store the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_modified_since">directory_info::get_files_modified_since()</a> - to store the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_ext_based_filelist">directory_info::get_ext_based_filelist()</a> - to store the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to return the selection list if the selection list was
+                             not empty and the selection was requested</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$fileselection_count" id="$fileselection_count"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$fileselection_count</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">281</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">File count of selection result variable</p>
+<p class="description"><p>Count of number of files in <a href="#var$filelist_selection">$filelist_selection</a></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_files_accessed_since">directory_info::get_files_accessed_since()</a> - to store a count of the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_accessed_before">directory_info::get_files_accessed_before()</a> - to store a count of the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_modified_before">directory_info::get_files_modified_before()</a> - to store a count of the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_modified_since">directory_info::get_files_modified_since()</a> - to store a count of the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_ext_based_filelist">directory_info::get_ext_based_filelist()</a> - to store a count of the results</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to check that $filelist_selection contains results if the
+                             requested list already seemed to exist and the last selection was
+                             requested - if selection was empty, then the complete list will be
+                             returned</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_exts" id="$last_exts"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array|string</span>
+			<span class="var-name">$last_exts</span>
+						(line <span class="line-number">323</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remember last validated extensions for efficiency</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="#var$exts">directory_info::$exts</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_mimetypes" id="$last_mimetypes"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$last_mimetypes</span>
+						(line <span class="line-number">339</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remember last validated mimetypes for efficiency</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="#var$mimetypes">directory_info::$mimetypes</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_passed_exts" id="$last_passed_exts"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array|string</span>
+			<span class="var-name">$last_passed_exts</span>
+						(line <span class="line-number">315</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remember last passed extensions for efficiency</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="#var$exts">directory_info::$exts</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_passed_mimetypes" id="$last_passed_mimetypes"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$last_passed_mimetypes</span>
+						(line <span class="line-number">331</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remember last passed mimetypes for efficiency</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="#var$mimetypes">directory_info::$mimetypes</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_path" id="$last_path"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$last_path</span>
+						(line <span class="line-number">298</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remember last path traversed for efficiency</p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_dir_list">directory_info::get_dir_list()</a> - to check whether the requested list already exists</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to check whether the requested list already exists</li>
+				<li><span class="field">see:</span> <a href="#var$pathtodir">directory_info::$pathtodir</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_recursive" id="$last_recursive"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$last_recursive</span>
+						(line <span class="line-number">307</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remember last recursive setting for efficiency</p>
+<p class="description"><p><ul><li>Default for recursion is <em>false</em></li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_dir_list">directory_info::get_dir_list()</a> - to check whether the requested list already exists</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to check whether the requested list already exists</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mimetypes" id="$mimetypes"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$mimetypes</span>
+			 = <span class="var-default">array( 'image/jpeg', 'image/png', 'image/gif' )</span>			(line <span class="line-number">188</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of mime types</p>
+<p class="description"><p>The list is used to determine which files should be included in the result array if you want  to strictly check that the files returned not only comply with the file extensions given, but  are also of the expected mimetype. <ul><li>Should be an array of mimetypes to show only files which comply with these mimetypes</li><li>High level mimetypes (content-types such as <em>image</em>) may be used and will be converted
+ 			to an array which covers all mimetypes within that content-type.</li><li>If left empty and a strict check is done via the <a href="#methodcheck_allowed_file">check_allowed_file()</a> method, the
+             relevant mimetypes will be guessed based on the passed extensions.</li><li>Defaults to typical image file extensions (jpg, gif, jpeg, png)</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodset_default_mimetypes">directory_info::set_default_mimetypes()</a> - to store new default</li>
+				<li><span class="field">see:</span> <a href="#var$exts">directory_info::$exts</a></li>
+				<li><span class="field">see:</span> <a href="#methodcheck_allowed_file">directory_info::check_allowed_file()</a></li>
+				<li><span class="field">see:</span> <a href="#methodcheck_file_mimetype">directory_info::check_file_mimetype()</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$mime_map" id="$mime_map"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$mime_map</span>
+			 = <span class="var-default">array(
+<br />		'ai'	=&gt;	'application/postscript',
+<br />		'aif'	=&gt;	'audio/x-aiff',
+<br />		'aifc'	=&gt;	'audio/x-aiff',
+<br />		'aiff'	=&gt;	'audio/x-aiff',
+<br />		'asc'	=&gt;	'text/plain',
+<br />		'au'	=&gt;	'audio/basic',
+<br />		'avi'	=&gt;	'video/x-msvideo',
+<br />		'bcpio'	=&gt;	'application/x-bcpio',
+<br />		'bin'	=&gt;	'application/octet-stream',
+<br />		'c'		=&gt;	'text/plain',
+<br />		'cc'	=&gt;	'text/plain',
+<br />		'ccad'	=&gt;	'application/clariscad',
+<br />		'cdf'	=&gt;	'application/x-netcdf',
+<br />		'class'	=&gt;	'application/octet-stream',
+<br />		'cpio'	=&gt;	'application/x-cpio',
+<br />		'cpt'	=&gt;	'application/mac-compactpro',
+<br />		'csh'	=&gt;	'application/x-csh',
+<br />		'css'	=&gt;	'text/css',
+<br />		'dcr'	=&gt;	'application/x-director',
+<br />		'dir'	=&gt;	'application/x-director',
+<br />		'dms'	=&gt;	'application/octet-stream',
+<br />		'doc'	=&gt;	'application/msword',
+<br />		'drw'	=&gt;	'application/drafting',
+<br />		'dvi'	=&gt;	'application/x-dvi',
+<br />		'dwg'	=&gt;	'application/acad',
+<br />		'dxf'	=&gt;	'application/dxf',
+<br />		'dxr'	=&gt;	'application/x-director',
+<br />		'eps'	=&gt;	'application/postscript',
+<br />		'etx'	=&gt;	'text/x-setext',
+<br />		'exe'	=&gt;	'application/octet-stream',
+<br />		'ez'	=&gt;	'application/andrew-inset',
+<br />		'f'		=&gt;	'text/plain',
+<br />		'f90'	=&gt;	'text/plain',
+<br />		'fli'	=&gt;	'video/x-fli',
+<br />		'gif'	=&gt;	'image/gif',
+<br />		'gtar'	=&gt;	'application/x-gtar',
+<br />		'gz'	=&gt;	'application/x-gzip',
+<br />		'h'		=&gt;	'text/plain',
+<br />		'hdf'	=&gt;	'application/x-hdf',
+<br />		'hh'	=&gt;	'text/plain',
+<br />		'hqx'	=&gt;	'application/mac-binhex40',
+<br />		'htm'	=&gt;	'text/html',
+<br />		'html'	=&gt;	'text/html',
+<br />		'ice'	=&gt;	'x-conference/x-cooltalk',
+<br />		'ief'	=&gt;	'image/ief',
+<br />		'iges'	=&gt;	'model/iges',
+<br />		'igs'	=&gt;	'model/iges',
+<br />		'ips'	=&gt;	'application/x-ipscript',
+<br />		'ipx'	=&gt;	'application/x-ipix',
+<br />		'jpe'	=&gt;	'image/jpeg',
+<br />		'jpeg'	=&gt;	'image/jpeg',
+<br />		'jpg'	=&gt;	'image/jpeg',
+<br />		'js'	=&gt;	'application/x-javascript',
+<br />		'kar'	=&gt;	'audio/midi',
+<br />		'latex'	=&gt;	'application/x-latex',
+<br />		'lha'	=&gt;	'application/octet-stream',
+<br />		'lsp'	=&gt;	'application/x-lisp',
+<br />		'lzh'	=&gt;	'application/octet-stream',
+<br />		'm'		=&gt;	'text/plain',
+<br />		'man'	=&gt;	'application/x-troff-man',
+<br />		'me'	=&gt;	'application/x-troff-me',
+<br />		'mesh'	=&gt;	'model/mesh',
+<br />		'mid'	=&gt;	'audio/midi',
+<br />		'midi'	=&gt;	'audio/midi',
+<br />		'mif'	=&gt;	'application/vnd.mif',
+<br />		'mime'	=&gt;	'www/mime',
+<br />		'mov'	=&gt;	'video/quicktime',
+<br />		'movie'	=&gt;	'video/x-sgi-movie',
+<br />		'mp2'	=&gt;	'audio/mpeg',
+<br />		'mp3'	=&gt;	'audio/mpeg',
+<br />		'mpe'	=&gt;	'video/mpeg',
+<br />		'mpeg'	=&gt;	'video/mpeg',
+<br />		'mpg'	=&gt;	'video/mpeg',
+<br />		'mpga'	=&gt;	'audio/mpeg',
+<br />		'ms'	=&gt;	'application/x-troff-ms',
+<br />		'msh'	=&gt;	'model/mesh',
+<br />		'nc'	=&gt;	'application/x-netcdf',
+<br />		'oda'	=&gt;	'application/oda',
+<br />		'pbm'	=&gt;	'image/x-portable-bitmap',
+<br />		'pdb'	=&gt;	'chemical/x-pdb',
+<br />		'pdf'	=&gt;	'application/pdf',
+<br />		'pgm'	=&gt;	'image/x-portable-graymap',
+<br />		'pgn'	=&gt;	'application/x-chess-pgn',
+<br />		'php'	=&gt;	'text/plain',
+<br />		'php3'	=&gt;	'text/plain',
+<br />		'png'	=&gt;	'image/png',
+<br />		'pnm'	=&gt;	'image/x-portable-anymap',
+<br />		'pot'	=&gt;	'application/mspowerpoint',
+<br />		'ppm'	=&gt;	'image/x-portable-pixmap',
+<br />		'pps'	=&gt;	'application/mspowerpoint',
+<br />		'ppt'	=&gt;	'application/mspowerpoint',
+<br />		'ppz'	=&gt;	'application/mspowerpoint',
+<br />		'pre'	=&gt;	'application/x-freelance',
+<br />		'prt'	=&gt;	'application/pro_eng',
+<br />		'ps'	=&gt;	'application/postscript',
+<br />		'qt'	=&gt;	'video/quicktime',
+<br />		'ra'	=&gt;	'audio/x-realaudio',
+<br />		'ram'	=&gt;	'audio/x-pn-realaudio',
+<br />		'ras'	=&gt;	'image/cmu-raster',
+<br />		'rgb'	=&gt;	'image/x-rgb',
+<br />		'rm'	=&gt;	'audio/x-pn-realaudio',
+<br />		'roff'	=&gt;	'application/x-troff',
+<br />		'rpm'	=&gt;	'audio/x-pn-realaudio-plugin',
+<br />		'rtf'	=&gt;	'text/rtf',
+<br />		'rtx'	=&gt;	'text/richtext',
+<br />		'scm'	=&gt;	'application/x-lotusscreencam',
+<br />		'set'	=&gt;	'application/set',
+<br />		'sgm'	=&gt;	'text/sgml',
+<br />		'sgml'	=&gt;	'text/sgml',
+<br />		'sh'	=&gt;	'application/x-sh',
+<br />		'shar'	=&gt;	'application/x-shar',
+<br />		'silo'	=&gt;	'model/mesh',
+<br />		'sit'	=&gt;	'application/x-stuffit',
+<br />		'skd'	=&gt;	'application/x-koan',
+<br />		'skm'	=&gt;	'application/x-koan',
+<br />		'skp'	=&gt;	'application/x-koan',
+<br />		'skt'	=&gt;	'application/x-koan',
+<br />		'smi'	=&gt;	'application/smil',
+<br />		'smil'	=&gt;	'application/smil',
+<br />		'snd'	=&gt;	'audio/basic',
+<br />		'sol'	=&gt;	'application/solids',
+<br />		'spl'	=&gt;	'application/x-futuresplash',
+<br />		'src'	=&gt;	'application/x-wais-source',
+<br />		'step'	=&gt;	'application/STEP',
+<br />		'stl'	=&gt;	'application/SLA',
+<br />		'stp'	=&gt;	'application/STEP',
+<br />		'sv4cpio'	=&gt;	'application/x-sv4cpio',
+<br />		'sv4crc'	=&gt;	'application/x-sv4crc',
+<br />		'swf'	=&gt;	'application/x-shockwave-flash',
+<br />		't'		=&gt;	'application/x-troff',
+<br />		'tar'	=&gt;	'application/x-tar',
+<br />		'tcl'	=&gt;	'application/x-tcl',
+<br />		'tex'	=&gt;	'application/x-tex',
+<br />		'texi'	=&gt;	'application/x-texinfo',
+<br />		'texinfo'	=&gt;	'application/x-texinfo',
+<br />		'tif'	=&gt;	'image/tiff',
+<br />		'tiff'	=&gt;	'image/tiff',
+<br />		'tr'	=&gt;	'application/x-troff',
+<br />		'tsi'	=&gt;	'audio/TSP-audio',
+<br />		'tsp'	=&gt;	'application/dsptype',
+<br />		'tsv'	=&gt;	'text/tab-separated-values',
+<br />		'txt'	=&gt;	'text/plain',
+<br />		'unv'	=&gt;	'application/i-deas',
+<br />		'ustar'	=&gt;	'application/x-ustar',
+<br />		'vcd'	=&gt;	'application/x-cdlink',
+<br />		'vda'	=&gt;	'application/vda',
+<br />		'viv'	=&gt;	'video/vnd.vivo',
+<br />		'vivo'	=&gt;	'video/vnd.vivo',
+<br />		'vrml'	=&gt;	'model/vrml',
+<br />		'wav'	=&gt;	'audio/x-wav',
+<br />		'wrl'	=&gt;	'model/vrml',
+<br />		'xbm'	=&gt;	'image/x-xbitmap',
+<br />		'xlc'	=&gt;	'application/vnd.ms-excel',
+<br />		'xll'	=&gt;	'application/vnd.ms-excel',
+<br />		'xlm'	=&gt;	'application/vnd.ms-excel',
+<br />		'xls'	=&gt;	'application/vnd.ms-excel',
+<br />		'xlw'	=&gt;	'application/vnd.ms-excel',
+<br />		'xml'	=&gt;	'text/xml',
+<br />		'xpm'	=&gt;	'image/x-xpixmap',
+<br />		'xwd'	=&gt;	'image/x-xwindowdump',
+<br />		'xyz'	=&gt;	'chemical/x-pdb',
+<br />		'zip'	=&gt;	'application/zip'
+<br />	)</span>			(line <span class="line-number">1520</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mapping of file extensions to their expected mime-type</p>
+<p class="description"><p>This mapping does not claim to be exhaustive, but is a good listing for a large amount  of file types.</p><p>Last updated: 2006-08-31</p></p>
+	<ul class="tags">
+				<li><span class="field">var:</span> key = file extension, value = mime-type</li>
+				<li><span class="field">usedby:</span> <a href="#methodcheck_allowed_file">directory_info::check_allowed_file()</a> - to 'guess' mimetypes based on $exts if no $mimetypes parameter
+                             was passed and a strict check was requested</li>
+				<li><span class="field">link:</span> <a href="http://www.duke.edu/websrv/file-extensions.html">http://www.duke.edu/websrv/file-extensions.html</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$pathtodir" id="$pathtodir"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$pathtodir</span>
+			 = <span class="var-default"> './'</span>			(line <span class="line-number">140</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Directory to traverse</p>
+<p class="description"><p><ul><li>Relative path to a directory, i.e. relative to the calling file</li><li>IMPORTANT: end the path with a trailing '/' !!!</li><li>Defaults to the current directory</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to default to if no $pathtodir was passed</li>
+				<li><span class="field">usedby:</span> <a href="#methodset_default_path">directory_info::set_default_path()</a> - to store new default</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$safe_exts" id="$safe_exts"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$safe_exts</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">152</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Only show 'safe' files/directories ?</p>
+<p class="description"><p><ul><li><em>true</em> means: only show 'safe' files (not .htaccess or references to higher
+ 			directories)</li><li><em>false</em> means: show all files</li><li>Defaults to <em>true</em></li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodset_safe_exts">directory_info::set_safe_exts()</a> - to store new default</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$strict" id="$strict"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$strict</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">201</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Do a strict file type check ?</p>
+<p class="description"><p>Whether to check whether the files with the correct extension *really* are of the  mime-type you would expect for a file with that extension. <ul><li>Defaults to <em>false</em>, i.e. don't do a strict check</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodset_strict">directory_info::set_strict()</a> - to store new default</li>
+				<li><span class="field">see:</span> <a href="#var$valid_mime_types">directory_info::$valid_mime_types</a></li>
+				<li><span class="field">see:</span> <a href="#var$mime_map">directory_info::$mime_map</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$valid_mime_types" id="$valid_mime_types"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$valid_mime_types</span>
+			 = <span class="var-default">array(
+<br />		'application'	=&gt;	array( 'activemessage', 'andrew-inset', 'applefile', 'atom+xml',
+<br />				'atomicmail', 'batch-SMTP', 'beep+xml', 'cals-1840', 'ccxml+xml', 'cnrp+xml',
+<br />				'commonground', 'conference-info+xml', 'cpl+xml', 'csta+xml', 'CSTAdata+xml',
+<br />				'cybercash', 'dca-rft', 'dec-dx', 'dialog-info+xml', 'dicom', 'dns', 'dvcs',
+<br />				'ecmascript', 'EDI-Consent', 'EDIFACT', 'EDI-X12', 'epp+xml', 'eshop', 'example',
+<br />				'fastinfoset', 'fastsoap', 'fits', 'font-tdpfr', 'H224', 'http', 'hyperstudio',
+<br />				'iges', 'im-iscomposing+xml', 'index', 'index.cmd', 'index.obj', 'index.response',
+<br />				'index.vnd', 'iotp', 'ipp', 'isup', 'javascript', 'json', 'kpml-request+xml',
+<br />				'kpml-response+xml', 'mac-binhex40', 'macwriteii', 'marc', 'mathematica', 'mbox',
+<br />				'mikey', 'mpeg4-generic', 'mpeg4-iod', 'mpeg4-iod-xmt', 'mp4', 'msword', 'mxf',
+<br />				'nasdata', 'news-message-id', 'news-transmission', 'nss', 'ocsp-request',
+<br />				'ocsp-response', 'octet-stream', 'oda', 'ogg', 'parityfec', 'pdf', 'pgp-encrypted',
+<br />				'pgp-keys', 'pgp-signature', 'pidf+xml', 'pkcs10', 'pkcs7-mime', 'pkcs7-signature',
+<br />				'pkix-cert', 'pkixcmp', 'pkix-crl', 'pkix-pkipath', 'pls+xml', 'poc-settings+xml',
+<br />				'postscript', 'prs.alvestrand.titrax-sheet', 'prs.cww', 'prs.nprend', 'prs.plucker',
+<br />				'rdf+xml', 'qsig', 'reginfo+xml', 'relax-ng-compact-syntax', 'remote-printing',
+<br />				'resource-lists+xml', 'riscos', 'rlmi+xml', 'rls-services+xml', 'rtf', 'rtx',
+<br />				'samlassertion+xml', 'samlmetadata+xml', 'sbml+xml', 'sdp', 'set-payment',
+<br />				'set-payment-initiation', 'set-registration', 'set-registration-initiation',
+<br />				'sgml', 'sgml-open-catalog', 'shf+xml', 'sieve', 'simple-filter+xml',
+<br />				'simple-message-summary', 'slate', 'smil', //OBSOLETE
+<br />				'smil+xml', 'soap+fastinfoset', 'soap+xml', 'spirits-event+xml', 'srgs',
+<br />				'srgs+xml', 'ssml+xml', 'timestamp-query', 'timestamp-reply', 'tve-trigger', 'vemmi',
+<br />				'vnd.3gpp.bsf+xml', 'vnd.3gpp.pic-bw-large', 'vnd.3gpp.pic-bw-small',
+<br />				'vnd.3gpp.pic-bw-var', 'vnd.3gpp.sms', 'vnd.3gpp2.bcmcsinfo+xml', 'vnd.3gpp2.sms',
+<br />				'vnd.3M.Post-it-Notes', 'vnd.accpac.simply.aso', 'vnd.accpac.simply.imp',
+<br />				'vnd.acucobol', 'vnd.acucorp', 'vnd.adobe.xfdf', 'vnd.aether.imp', 'vnd.amiga.ami',
+<br />				'vnd.anser-web-certificate-issue-initiation', 'vnd.apple.installer+xml',
+<br />				'vnd.audiograph', 'vnd.autopackage', 'vnd.blueice.multipass', 'vnd.bmi',
+<br />				'vnd.businessobjects', 'vnd.canon-cpdl', 'vnd.canon-lips', 'vnd.cinderella',
+<br />				'vnd.chipnuts.karaoke-mmd', 'vnd.claymore', 'vnd.commerce-battelle',
+<br />				'vnd.commonspace', 'vnd.cosmocaller', 'vnd.contact.cmsg', 'vnd.crick.clicker',
+<br />				'vnd.crick.clicker.keyboard', 'vnd.crick.clicker.palette',
+<br />				'vnd.crick.clicker.template', 'vnd.crick.clicker.wordbank',
+<br />				'vnd.criticaltools.wbs+xml', 'vnd.ctc-posml', 'vnd.cups-pdf', 'vnd.cups-postscript',
+<br />				'vnd.cups-ppd', 'vnd.cups-raster', 'vnd.cups-raw', 'vnd.curl', 'vnd.cybank',
+<br />				'vnd.data-vision.rdz', 'vnd.dna', 'vnd.dpgraph', 'vnd.dreamfactory',
+<br />				'vnd.dvb.esgcontainer', 'vnd.dvb.ipdcesgaccess', 'vnd.dxr', 'vnd.ecdis-update',
+<br />				'vnd.ecowin.chart', 'vnd.ecowin.filerequest', 'vnd.ecowin.fileupdate',
+<br />				'vnd.ecowin.series', 'vnd.ecowin.seriesrequest', 'vnd.ecowin.seriesupdate',
+<br />				'vnd.enliven', 'vnd.epson.esf', 'vnd.epson.msf', 'vnd.epson.quickanime',
+<br />				'vnd.epson.salt', 'vnd.epson.ssf', 'vnd.ericsson.quickcall', 'vnd.eudora.data',
+<br />				'vnd.ezpix-album', 'vnd.ezpix-package', 'vnd.fdf', 'vnd.ffsns', 'vnd.fints',
+<br />				'vnd.FloGraphIt', 'vnd.fluxtime.clip', 'vnd.framemaker', 'vnd.frogans.fnc',
+<br />				'vnd.frogans.ltf', 'vnd.fsc.weblaunch', 'vnd.fujitsu.oasys', 'vnd.fujitsu.oasys2',
+<br />				'vnd.fujitsu.oasys3', 'vnd.fujitsu.oasysgp', 'vnd.fujitsu.oasysprs',
+<br />				'vnd.fujixerox.ART4', 'vnd.fujixerox.ART-EX', 'vnd.fujixerox.ddd',
+<br />				'vnd.fujixerox.docuworks', 'vnd.fujixerox.docuworks.binder', 'vnd.fujixerox.HBPL',
+<br />				'vnd.fut-misnet', 'vnd.genomatix.tuxedo', 'vnd.grafeq', 'vnd.groove-account',
+<br />				'vnd.groove-help', 'vnd.groove-identity-message', 'vnd.groove-injector',
+<br />				'vnd.groove-tool-message', 'vnd.groove-tool-template', 'vnd.groove-vcard',
+<br />				'vnd.HandHeld-Entertainment+xml', 'vnd.hbci', 'vnd.hcl-bireports',
+<br />				'vnd.hhe.lesson-player', 'vnd.hp-HPGL', 'vnd.hp-hpid', 'vnd.hp-hps',
+<br />				'vnd.hp-jlyt', 'vnd.hp-PCL', 'vnd.hp-PCLXL', 'vnd.httphone', 'vnd.hzn-3d-crossword',
+<br />				'vnd.ibm.afplinedata', 'vnd.ibm.electronic-media', 'vnd.ibm.MiniPay',
+<br />				'vnd.ibm.modcap', 'vnd.ibm.rights-management', 'vnd.ibm.secure-container',
+<br />				'vnd.igloader', 'vnd.informix-visionary', 'vnd.intercon.formnet',
+<br />				'vnd.intertrust.digibox', 'vnd.intertrust.nncp', 'vnd.intu.qbo', 'vnd.intu.qfx',
+<br />				'vnd.ipunplugged.rcprofile', 'vnd.irepository.package+xml', 'vnd.is-xpr',
+<br />				'vnd.japannet-directory-service', 'vnd.japannet-jpnstore-wakeup',
+<br />				'vnd.japannet-payment-wakeup', 'vnd.japannet-registration',
+<br />				'vnd.japannet-registration-wakeup', 'vnd.japannet-setstore-wakeup',
+<br />				'vnd.japannet-verification', 'vnd.japannet-verification-wakeup',
+<br />				'vnd.jisp', 'vnd.kahootz', 'vnd.kde.karbon', 'vnd.kde.kchart', 'vnd.kde.kformula',
+<br />				'vnd.kde.kivio', 'vnd.kde.kontour', 'vnd.kde.kpresenter', 'vnd.kde.kspread',
+<br />				'vnd.kde.kword', 'vnd.kenameaapp', 'vnd.kidspiration', 'vnd.Kinar',
+<br />				'vnd.koan', 'vnd.liberty-request+xml', 'vnd.llamagraphics.life-balance.desktop',
+<br />				'vnd.llamagraphics.life-balance.exchange+xml', 'vnd.lotus-1-2-3',
+<br />				'vnd.lotus-approach', 'vnd.lotus-freelance', 'vnd.lotus-notes',
+<br />				'vnd.lotus-organizer', 'vnd.lotus-screencam', 'vnd.lotus-wordpro',
+<br />				'vnd.marlin.drm.mdcf', 'vnd.mcd', 'vnd.medcalcdata', 'vnd.mediastation.cdkey',
+<br />				'vnd.meridian-slingshot', 'vnd.mfmp', 'vnd.micrografx.flo', 'vnd.micrografx.igx',
+<br />				'vnd.mif', 'vnd.minisoft-hp3000-save', 'vnd.mitsubishi.misty-guard.trustweb',
+<br />				'vnd.Mobius.DAF', 'vnd.Mobius.DIS', 'vnd.Mobius.MBK', 'vnd.Mobius.MQY',
+<br />				'vnd.Mobius.MSL', 'vnd.Mobius.PLC', 'vnd.Mobius.TXF', 'vnd.mophun.application',
+<br />				'vnd.mophun.certificate', 'vnd.motorola.flexsuite', 'vnd.motorola.flexsuite.adsi',
+<br />				'vnd.motorola.flexsuite.fis', 'vnd.motorola.flexsuite.gotap',
+<br />				'vnd.motorola.flexsuite.kmr', 'vnd.motorola.flexsuite.ttc',
+<br />				'vnd.motorola.flexsuite.wem', 'vnd.mozilla.xul+xml', 'vnd.ms-artgalry',
+<br />				'vnd.ms-asf', 'vnd.ms-cab-compressed', 'vnd.mseq', 'vnd.ms-excel',
+<br />				'vnd.ms-fontobject', 'vnd.ms-htmlhelp', 'vnd.msign', 'vnd.ms-ims', 'vnd.ms-lrm',
+<br />				'vnd.ms-powerpoint', 'vnd.ms-project', 'vnd.ms-tnef', 'vnd.ms-wmdrm.lic-chlg-req',
+<br />				'vnd.ms-wmdrm.lic-resp', 'vnd.ms-works', 'vnd.ms-wpl', 'vnd.ms-xpsdocument',
+<br />				'vnd.musician', 'vnd.music-niff', 'vnd.nervana', 'vnd.netfpx',
+<br />				'vnd.noblenet-directory', 'vnd.noblenet-sealer', 'vnd.noblenet-web',
+<br />				'vnd.nokia.catalogs', 'vnd.nokia.conml+wbxml', 'vnd.nokia.conml+xml',
+<br />				'vnd.nokia.iptv.config+xml', 'vnd.nokia.landmark+wbxml', 'vnd.nokia.landmark+xml',
+<br />				'vnd.nokia.landmarkcollection+xml', 'vnd.nokia.pcd+wbxml', 'vnd.nokia.pcd+xml',
+<br />				'vnd.nokia.radio-preset', 'vnd.nokia.radio-presets', 'vnd.novadigm.EDM',
+<br />				'vnd.novadigm.EDX', 'vnd.novadigm.EXT', 'vnd.oasis.opendocument.chart',
+<br />				'vnd.oasis.opendocument.chart-template', 'vnd.oasis.opendocument.formula',
+<br />				'vnd.oasis.opendocument.formula-template', 'vnd.oasis.opendocument.graphics',
+<br />				'vnd.oasis.opendocument.graphics-template', 'vnd.oasis.opendocument.image',
+<br />				'vnd.oasis.opendocument.image-template', 'vnd.oasis.opendocument.presentation',
+<br />				'vnd.oasis.opendocument.presentation-template', 'vnd.oasis.opendocument.spreadsheet',
+<br />				'vnd.oasis.opendocument.spreadsheet-template', 'vnd.oasis.opendocument.text',
+<br />				'vnd.oasis.opendocument.text-master', 'vnd.oasis.opendocument.text-template',
+<br />				'vnd.oasis.opendocument.text-web', 'vnd.obn', 'vnd.oma.dd2+xml',
+<br />				'vnd.omads-email+xml', 'vnd.omads-file+xml', 'vnd.omads-folder+xml',
+<br />				'vnd.omaloc-supl-init', 'vnd.osa.netdeploy', 'vnd.osgi.dp', 'vnd.otps.ct-kip+xml',
+<br />				'vnd.palm', 'vnd.paos.xml', 'vnd.pg.format', 'vnd.pg.osasli',
+<br />				'vnd.piaccess.application-licence', 'vnd.picsel', 'vnd.pocketlearn',
+<br />				'vnd.powerbuilder6', 'vnd.powerbuilder6-s', 'vnd.powerbuilder7',
+<br />				'vnd.powerbuilder75', 'vnd.powerbuilder75-s', 'vnd.powerbuilder7-s',
+<br />				'vnd.preminet', 'vnd.previewsystems.box', 'vnd.proteus.magazine',
+<br />				'vnd.publishare-delta-tree', 'vnd.pvi.ptid1', 'vnd.pwg-multiplexed',
+<br />				'vnd.pwg-xhtml-print+xml', 'vnd.qualcomm.brew-app-res', 'vnd.Quark.QuarkXPress',
+<br />				'vnd.rapid', 'vnd.RenLearn.rlprint', 'vnd.ruckus.download', 'vnd.s3sms',
+<br />				'vnd.scribus', 'vnd.sealed.3df', 'vnd.sealed.csf', 'vnd.sealed.doc',
+<br />				'vnd.sealed.eml', 'vnd.sealed.mht', 'vnd.sealed.net', 'vnd.sealed.ppt',
+<br />				'vnd.sealed.tiff', 'vnd.sealed.xls', 'vnd.sealedmedia.softseal.html',
+<br />				'vnd.sealedmedia.softseal.pdf', 'vnd.seemail', 'vnd.sema',
+<br />				'vnd.shana.informed.formdata', 'vnd.shana.informed.formtemplate',
+<br />				'vnd.shana.informed.interchange', 'vnd.shana.informed.package',
+<br />				'vnd.smaf', 'vnd.solent.sdkm+xml', 'vnd.sss-cod', 'vnd.sss-dtf', 'vnd.sss-ntf',
+<br />				'vnd.street-stream', 'vnd.sun.wadl+xml', 'vnd.sus-calendar', 'vnd.svd',
+<br />				'vnd.swiftview-ics', 'vnd.syncml.dm+wbxml', 'vnd.syncml.ds.notification',
+<br />				'vnd.syncml.+xml', 'vnd.triscape.mxs', 'vnd.trueapp', 'vnd.truedoc',
+<br />				'vnd.ufdl', 'vnd.uiq.theme', 'vnd.umajin', 'vnd.uoml+xml', 'vnd.uplanet.alert',
+<br />				'vnd.uplanet.alert-wbxml', 'vnd.uplanet.bearer-choice',
+<br />				'vnd.uplanet.bearer-choice-wbxml', 'vnd.uplanet.cacheop', 'vnd.uplanet.cacheop-wbxml',
+<br />				'vnd.uplanet.channel', 'vnd.uplanet.channel-wbxml', 'vnd.uplanet.list',
+<br />				'vnd.uplanet.listcmd', 'vnd.uplanet.listcmd-wbxml', 'vnd.uplanet.list-wbxml',
+<br />				'vnd.uplanet.signal', 'vnd.vcx', 'vnd.vectorworks', 'vnd.vd-study',
+<br />				'vnd.vidsoft.vidconference', 'vnd.visio', 'vnd.visionary',
+<br />				'vnd.vividence.scriptfile', 'vnd.vsf', 'vnd.wap.sic', 'vnd.wap.slc', 'vnd.wap.wbxml',
+<br />				'vnd.wap.wmlc', 'vnd.wap.wmlscriptc', 'vnd.webturbo', 'vnd.wfa.wsc',
+<br />				'vnd.wordperfect', 'vnd.wqd', 'vnd.wrq-hp3000-labelled', 'vnd.wt.stf',
+<br />				'vnd.wv.csp+xml', 'vnd.wv.csp+wbxml', 'vnd.wv.ssp+xml', 'vnd.xara', 'vnd.xfdl',
+<br />				'vnd.yamaha.hv-dic', 'vnd.yamaha.hv-script', 'vnd.yamaha.hv-voice',
+<br />				'vnd.yamaha.smaf-audio', 'vnd.yamaha.smaf-phrase', 'vnd.yellowriver-custom-menu',
+<br />				'vnd.zzazz.deck+xml', 'voicexml+xml', 'watcherinfo+xml', 'whoispp-query',
+<br />				'whoispp-response', 'wita', 'wordperfect5.1', 'x400-bp', 'xcap-att+xml',
+<br />				'xcap-caps+xml', 'xcap-el+xml', 'xcap-error+xml', 'xenc+xml',
+<br />				'xhtml-voice+xml', // OBSOLETE
+<br />				'xhtml+xml', 'xml', 'xml-dtd', 'xml-external-parsed-entity', 'xmpp+xml',
+<br />				'xop+xml', 'xv+xml', 'zip',
+<br />		),'audio'=&gt;array('32kadpcm','3gpp','3gpp2','ac3','AMR','AMR-WB','amr-wb+','asc','basic','BV16','BV32','clearmode','CN','DAT12','dls','dsr-es201108','dsr-es202050','dsr-es202211','dsr-es202212','eac3','DVI4','EVRC','EVRC0','EVRC-QCP','example','G722','G7221','G723','G726-16','G726-24','G726-32','G726-40','G728','G729','G729D','G729E','GSM','GSM-EFR','iLBC','L8','L16','L20','L24','LPC','MPA','mp4','MP4A-LATM','mpa-robust','mpeg','mpeg4-generic','parityfec','PCMA','PCMU','prs.sid','QCELP','RED','rtp-midi','rtx','SMV','SMV0','SMV-QCP','t140c','t38','telephone-event','tone','VDVI','VMR-WB','vnd.3gpp.iufp','vnd.4SB','vnd.audiokoz','vnd.CELP','vnd.cisco.nse','vnd.cmles.radio-events','vnd.cns.anp1','vnd.cns.inf1','vnd.digital-winds','vnd.dlna.adts','vnd.everad.plj','vnd.hns.audio','vnd.lucent.voice','vnd.nokia.mobile-xmf','vnd.nortel.vbk','vnd.nuera.ecelp4800','vnd.nuera.ecelp7470','vnd.nuera.ecelp9600','vnd.octel.sbc','vnd.qcelp',// DEPRECATED - Please use audio/qcelp
+<br />'vnd.rhetorex.32kadpcm','vnd.sealedmedia.softseal.mpeg','vnd.vmx.cvsd'),'example'=&gt;array(),'image '=&gt;array('cgm','example','fits','g3fax','gif','ief','jp2','jpeg','jpm','jpx','naplps','png','prs.btif','prs.pti','t38','tiff','tiff-fx','vnd.adobe.photoshop','vnd.cns.inf2','vnd.djvu','vnd.dwg','vnd.dxf','vnd.fastbidsheet','vnd.fpx','vnd.fst','vnd.fujixerox.edmics-mmr','vnd.fujixerox.edmics-rlc','vnd.globalgraphics.pgb','vnd.microsoft.icon','vnd.mix','vnd.ms-modi','vnd.net-fpx','vnd.sealed.png','vnd.sealedmedia.softseal.gif','vnd.sealedmedia.softseal.jpg','vnd.svf','vnd.wap.wbmp','vnd.xiff'),'message'=&gt;array('CPIM','delivery-status','disposition-notification','example','external-body','http','news','partial','rfc822','s-http','sip','sipfrag','tracking-status'),'model'=&gt;array('example','iges','mesh','vnd.dwf','vnd.flatland.3dml','vnd.gdl','vnd.gs-gdl','vnd.gtw','vnd.moml+xml','vnd.mts','vnd.parasolid.transmit.binary','vnd.parasolid.transmit.text','vnd.vtu','vrml'),'multipart'=&gt;array('alternative','appledouble','byteranges','digest','encrypted','example','form-data','header-set','mixed','parallel','related','report','signed','voice-message'),'text'=&gt;array('calendar','css','csv','directory','dns','ecmascript',// OBSOLETE
+<br />'enriched','example','html','javascript',// OBSOLETE
+<br />'parityfec','plain','prs.fallenstein.rst','prs.lines.tag','RED','rfc822-headers','richtext','rtf','rtx','sgml','t140','tab-separated-values','troff','uri-list','vnd.abc','vnd.curl','vnd.DMClientScript','vnd.esmertec.theme-descriptor','vnd.fly','vnd.fmi.flexstor','vnd.in3d.3dml','vnd.in3d.spot','vnd.IPTC.NewsML','vnd.IPTC.NITF','vnd.latex-z','vnd.motorola.reflex','vnd.ms-mediapackage','vnd.net2phone.commcenter.command','vnd.sun.j2me.app-descriptor','vnd.wap.si','vnd.wap.sl','vnd.wap.wml','vnd.wap.wmlscript','xml','xml-external-parsed-entity'),'video'=&gt;array('3gpp','3gpp2','3gpp-tt','BMPEG','BT656','CelB','DV','example','H261','H263','H263-1998','H263-2000','H264','JPEG','MJ2','MP1S','MP2P','MP2T','mp4','MP4V-ES','MPV','mpeg','mpeg4-generic','nv','parityfec','pointer','quicktime','raw','rtx','SMPTE292M','vc1','vnd.dlna.mpeg-tts','vnd.fvt','vnd.hns.video','vnd.motorola.video','vnd.motorola.videop','vnd.mpegurl','vnd.nokia.interleaved-multimedia','vnd.objectvideo','vnd.sealed.mpeg1','vnd.sealed.mpeg4','vnd.sealed.swf','vnd.sealedmedia.softseal.mov','vnd.vivo'))</span>			(line <span class="line-number">1692</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Valid mime types</p>
+<p class="description"><p>Last updated on 2006-08-31</p></p>
+	<ul class="tags">
+				<li><span class="field">var:</span> key = Content-type, value = array of valid subtypes for that content-type</li>
+				<li><span class="field">link:</span> <a href="http://www.iana.org/assignments/media-types/">http://www.iana.org/assignments/media-types/</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcheck_allowed_file" id="check_allowed_file"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">check_allowed_file</span> (line <span class="line-number">621</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check whether the file is allowed based on extension and if $strict=true also on mimetype</p>
+<p class="description"><p><ul><li>Will use the class defaults for optional parameters which were not passed</li><li>Will try to 'guess' the mimetypes if a strict check is requested, but no mimetypes were
+ 			passed</li><li>Returns <em>true</em> is the file passes, <em>false</em> if not.</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="#methodcheck_file_extension">directory_info::check_file_extension()</a> - to validate the file against the extension list</li>
+				<li><span class="field">uses:</span> <a href="#methodcheck_file_mimetype">directory_info::check_file_mimetype()</a> - to validate the file against the mimetypes</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_ext_based_filelist">directory_info::get_ext_based_filelist()</a> - to check for each file whether it complies with the criteria</li>
+				<li><span class="field">uses:</span> validate_extension_list() - to validate the passed extension list</li>
+				<li><span class="field">uses:</span> <a href="#var$mime_map">directory_info::$mime_map</a> - to 'guess' mimetypes based on $exts if no $mimetypes parameter
+                             was passed and a strict check was requested</li>
+				<li><span class="field">see:</span> <a href="#var$strict">directory_info::$strict</a></li>
+				<li><span class="field">see:</span> <a href="#var$mimetypes">directory_info::$mimetypes</a></li>
+				<li><span class="field">see:</span> <a href="#var$exts">directory_info::$exts</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			check_allowed_file
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>, [<span class="var-type">array|string</span>&nbsp;<span class="var-name">$exts</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$mimetypes</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span><span class="var-description">: path to the file to check</span>			</li>
+					<li>
+				<span class="var-type">array|string</span>
+				<span class="var-name">$exts</span><span class="var-description">: [optional] allowed extensions</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$strict</span><span class="var-description">: [optional] whether or not to check on mimetype</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$mimetypes</span><span class="var-description">: [optional] allowed mimetypes</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodcheck_file_extension" id="check_file_extension"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">check_file_extension</span> (line <span class="line-number">679</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check the file extension of a filename against the list of allowed extensions</p>
+<p class="description"><p><ul><li>This is a case-insensitive extension check</li><li>Will use the class defaults for optional parameters which were not passed</li><li>Returns <em>true</em> if the filename passes the valid extension check</li><li>Returns <em>false</em> is it fails or if the passed filename parameter is not a string</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodcheck_allowed_file">directory_info::check_allowed_file()</a> - to validate the file against the extension list</li>
+				<li><span class="field">uses:</span> validate_extension_list() - used to parse the extension list to the expected format</li>
+				<li><span class="field">see:</span> <a href="#var$exts">directory_info::$exts</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			check_file_extension
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">array|string</span>&nbsp;<span class="var-name">$exts</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: filename to check</span>			</li>
+					<li>
+				<span class="var-type">array|string</span>
+				<span class="var-name">$exts</span><span class="var-description">: [optional] array of allowed extensions</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodcheck_file_mimetype" id="check_file_mimetype"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">check_file_mimetype</span> (line <span class="line-number">721</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check the file-mimetype against a list of allowed mimetypes</p>
+<p class="description"><p><ul><li>Will use the class defaults for optional parameters which were not passed</li><li>Returns <em>true</em> if the file-mimetype is within the list of allowed mimetypes</li><li>Returns <em>false</em> if not or if the passed filename parameter is not a string</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodcheck_allowed_file">directory_info::check_allowed_file()</a> - to validate the file against the mimetypes</li>
+				<li><span class="field">uses:</span> <a href="#methodget_mime_content_type">directory_info::get_mime_content_type()</a> - to retrieve the file mimetype</li>
+				<li><span class="field">uses:</span> validate_mime_types() - to validate the passed mimetypes</li>
+				<li><span class="field">uses:</span> <a href="#methodvalid_pathtofile">directory_info::valid_pathtofile()</a> - to check whether the $pathtofile parameter is valid</li>
+				<li><span class="field">see:</span> <a href="#var$mimetypes">directory_info::$mimetypes</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			check_file_mimetype
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$mimetypes</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$mimetypes</span><span class="var-description">: [optional] array of valid mimetypes</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_dirsize" id="get_dirsize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_dirsize</span> (line <span class="line-number">1478</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the total size of all files in $pathtodir</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> total size of files in directory in bytes</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_dirsize">directory_info::get_human_readable_dirsize()</a> - to retrieve the total size of the files in the directory</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filesize">directory_info::get_filesize()</a> - to retrieve information on the filesize of individual files</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to retrieve a filelist to use - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">see:</span> <a href="http://www.php.net/function.stat">http://www.php.net/function.stat</a></li>
+				<li><span class="field">author:</span> marting.dc AT gmail.com - 29-Jan-2006 02:08</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			get_dirsize
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be used if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the size</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to include filesize of files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_dir_list" id="get_dir_list"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_dir_list</span> (line <span class="line-number">1032</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a list of directories in $pathtodir</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of filenames</li>
+				<li><span class="field">uses:</span> <a href="#var$dirlist">directory_info::$dirlist</a> - to return the list as stored by traverse_directory
+                             now or earlier</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_sorted_dirlist">directory_info::get_sorted_dirlist()</a> - to retrieve the directory list</li>
+				<li><span class="field">uses:</span> traverse_directory() - to retrieve a new dirlist if needed</li>
+				<li><span class="field">uses:</span> <a href="#var$last_recursive">directory_info::$last_recursive</a> - to check whether the requested list already exists</li>
+				<li><span class="field">uses:</span> <a href="#var$last_path">directory_info::$last_path</a> - to check whether the requested list already exists</li>
+				<li><span class="field">see:</span> get_filelist()    for more information on retrieving an earlier created list</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_dir_list
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on directories in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_ext_based_filelist" id="get_ext_based_filelist"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_ext_based_filelist</span> (line <span class="line-number">1182</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a filelist which only contains files which comply with the allowed extension/mimetypes</p>
+<p class="description"><p><ul><li>Creates a selection list of files which comply with the criteria set by
+ 		allowed extensions / allowed mimetypes</li><li>$strict determined whether or not to check on mimetype</li><li>$exts, $strict and $mimetypes default to the class defaults if not passed</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of filenames of files which pass the test</li>
+				<li><span class="field">uses:</span> <a href="#var$fileselection_count">directory_info::$fileselection_count</a> - to store a count of the results</li>
+				<li><span class="field">uses:</span> <a href="#var$filelist_selection">directory_info::$filelist_selection</a> - to store the results</li>
+				<li><span class="field">uses:</span> <a href="#methodcheck_allowed_file">directory_info::check_allowed_file()</a> - to check for each file whether it complies with the criteria</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_ext_based_filelist
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>], [<span class="var-type">array|string</span>&nbsp;<span class="var-name">$exts</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$mimetypes</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be returned if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on files in                                      subdirectories</span>			</li>
+					<li>
+				<span class="var-type">array|string</span>
+				<span class="var-name">$exts</span><span class="var-description">: [optional] allowed extensions</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$strict</span><span class="var-description">: [optional] whether or not to check on mimetype</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$mimetypes</span><span class="var-description">: [optional] allowed mimetypes</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_filelist" id="get_filelist"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_filelist</span> (line <span class="line-number">998</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get list of files in $pathtodir</p>
+<p class="description"><p><ul><li>Use this method to retrieve a filelist for a certain directory path</li><li>If a filelist was created before and you want to retrieve this list, you can use this function
+ 		without any parameters and it will return the previously created list</li><li>If you created a selection based on the earlier created filelist, you can choose to retrieve
+ 		that selection instead by setting $use_selection to <em>true</em></li><li>If no filelist was created before and no parameters are passed, it will retrieve a filelist
+ 		based on the class defaults</li><li>If you call this method as a static method, logically you can not retrieve an earlier
+ 		created listing or selection list</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of filenames</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_modified_since">directory_info::get_files_modified_since()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_most_recent_file">directory_info::get_most_recent_file()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_sorted_filelist">directory_info::get_sorted_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_modified_before">directory_info::get_files_modified_before()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_accessed_since">directory_info::get_files_accessed_since()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_dirsize">directory_info::get_dirsize()</a> - to retrieve a filelist to use - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_accessed_before">directory_info::get_files_accessed_before()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_ext_based_filelist">directory_info::get_ext_based_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">uses:</span> <a href="#var$filelist_selection">directory_info::$filelist_selection</a> - to return the selection list if the selection list was
+                             not empty and the selection was requested</li>
+				<li><span class="field">uses:</span> traverse_directory() - to retrieve a new filelist if needed</li>
+				<li><span class="field">uses:</span> <a href="#var$last_recursive">directory_info::$last_recursive</a> - to check whether the requested list already exists</li>
+				<li><span class="field">uses:</span> <a href="#var$filelist">directory_info::$filelist</a> - to return the list as stored by traverse_directory
+                             now or earlier</li>
+				<li><span class="field">uses:</span> <a href="#var$filecount">directory_info::$filecount</a> - to check that $filelist contains results if the requested list
+                             already seemed to exist</li>
+				<li><span class="field">uses:</span> <a href="#var$fileselection_count">directory_info::$fileselection_count</a> - to check that $filelist_selection contains results if the
+                             requested list already seemed to exist and the last selection was
+                             requested - if selection was empty, then the complete list will be
+                             returned</li>
+				<li><span class="field">uses:</span> <a href="#var$pathtodir">directory_info::$pathtodir</a> - to default to if no $pathtodir was passed</li>
+				<li><span class="field">uses:</span> <a href="#var$last_path">directory_info::$last_path</a> - to check whether the requested list already exists</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_filelist
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be returned if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_filesize" id="get_filesize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_filesize</span> (line <span class="line-number">740</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the filesize of a file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> filesize or false if an invalid $pathtofile was passed</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_dirsize">directory_info::get_dirsize()</a> - to retrieve information on the filesize of individual files</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_filesize">directory_info::get_human_readable_filesize()</a> - to retrieve the filesize</li>
+				<li><span class="field">uses:</span> <a href="#methodvalid_pathtofile">directory_info::valid_pathtofile()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.filesize">http://www.php.net/function.filesize</a></li>
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int|false</span>
+		<span class="method-name">
+			get_filesize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_files_accessed_before" id="get_files_accessed_before"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_files_accessed_before</span> (line <span class="line-number">1445</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a filelist which only contains files accessed before the passed unix timestamp</p>
+<p class="description"><p><ul><li>Creates a selection list of files which comply with the criteria set by $comparets</li></ul>  Inspired by a comment from Benan Tumkaya (benantumkaya at yahoo) - 14-Aug-2006 11:11</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of filenames of files which pass the test</li>
+				<li><span class="field">uses:</span> <a href="#var$fileselection_count">directory_info::$fileselection_count</a> - to store a count of the results</li>
+				<li><span class="field">uses:</span> <a href="#var$filelist_selection">directory_info::$filelist_selection</a> - to store the results</li>
+				<li><span class="field">uses:</span> <a href="#methodget_lastacc_unixts">directory_info::get_lastacc_unixts()</a> - to get the last access unix timestamp for each file to test</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.fileatime">http://www.php.net/function.fileatime</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_files_accessed_before
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$compare_ts</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$compare_ts</span><span class="var-description">: Unix timestamp for date/time to compare against</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be used if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_files_accessed_since" id="get_files_accessed_since"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_files_accessed_since</span> (line <span class="line-number">1407</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a filelist which only contains files accessed since the passed unix timestamp</p>
+<p class="description"><p><ul><li>Creates a selection list of files which comply with the criteria set by $comparets</li></ul>  Inspired by a comment from Benan Tumkaya (benantumkaya at yahoo) - 14-Aug-2006 11:11</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of filenames of files which pass the test</li>
+				<li><span class="field">uses:</span> <a href="#var$fileselection_count">directory_info::$fileselection_count</a> - to store a count of the results</li>
+				<li><span class="field">uses:</span> <a href="#var$filelist_selection">directory_info::$filelist_selection</a> - to store the results</li>
+				<li><span class="field">uses:</span> <a href="#methodget_lastacc_unixts">directory_info::get_lastacc_unixts()</a> - to get the last access unix timestamp for each file to test</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.fileatime">http://www.php.net/function.fileatime</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_files_accessed_since
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$compare_ts</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$compare_ts</span><span class="var-description">: Unix timestamp for date/time to compare against</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be used if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_files_modified_before" id="get_files_modified_before"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_files_modified_before</span> (line <span class="line-number">1369</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a filelist which only contains files modified before the passed unix timestamp</p>
+<p class="description"><p><ul><li>Creates a selection list of files which comply with the criteria set by $comparets</li></ul>  Inspired by a comment from Benan Tumkaya (benantumkaya at yahoo) - 14-Aug-2006 11:11</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of filenames of files which pass the test</li>
+				<li><span class="field">uses:</span> <a href="#var$fileselection_count">directory_info::$fileselection_count</a> - to store a count of the results</li>
+				<li><span class="field">uses:</span> <a href="#var$filelist_selection">directory_info::$filelist_selection</a> - to store the results</li>
+				<li><span class="field">uses:</span> <a href="#methodget_lastmod_unixts">directory_info::get_lastmod_unixts()</a> - to get the last modified unix timestamp for each file to test</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.filemtime">http://www.php.net/function.filemtime</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_files_modified_before
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$compare_ts</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$compare_ts</span><span class="var-description">: Unix timestamp for date/time to compare against</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be used if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_files_modified_since" id="get_files_modified_since"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_files_modified_since</span> (line <span class="line-number">1331</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a filelist which only contains files modified since the passed unix timestamp</p>
+<p class="description"><p><ul><li>Creates a selection list of files which comply with the criteria set by $comparets</li></ul>  Inspired by a comment from Benan Tumkaya (benantumkaya at yahoo) - 14-Aug-2006 11:11</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of filenames of files which pass the test</li>
+				<li><span class="field">uses:</span> <a href="#var$fileselection_count">directory_info::$fileselection_count</a> - to store a count of the results</li>
+				<li><span class="field">uses:</span> <a href="#var$filelist_selection">directory_info::$filelist_selection</a> - to store the results</li>
+				<li><span class="field">uses:</span> <a href="#methodget_lastmod_unixts">directory_info::get_lastmod_unixts()</a> - to get the last modified unix timestamp for each file to test</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.filemtime">http://www.php.net/function.filemtime</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_files_modified_since
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$compare_ts</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$compare_ts</span><span class="var-description">: Unix timestamp for date/time to compare against</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be used if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_file_owner" id="get_file_owner"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_file_owner</span> (line <span class="line-number">878</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the file owner for a file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> user id of the file owner or false if an invalid $pathtofile was passed</li>
+				<li><span class="field">uses:</span> <a href="#methodvalid_pathtofile">directory_info::valid_pathtofile()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.fileowner">http://www.php.net/function.fileowner</a></li>
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int|false</span>
+		<span class="method-name">
+			get_file_owner
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_human_readable_dirsize" id="get_human_readable_dirsize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_human_readable_dirsize</span> (line <span class="line-number">1504</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the total size of all files in a directory in a human readable format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> human readable directory size string</li>
+				<li><span class="field">uses:</span> <a href="#methodhuman_readable_filesize">directory_info::human_readable_filesize()</a> - to convert the size to a human readable string</li>
+				<li><span class="field">uses:</span> <a href="#methodget_dirsize">directory_info::get_dirsize()</a> - to retrieve the total size of the files in the directory</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_human_readable_dirsize
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be used if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the size</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to include filesize of files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_human_readable_filesize" id="get_human_readable_filesize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_human_readable_filesize</span> (line <span class="line-number">756</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the filesize of a file in a human readable format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> human readable filesize string or false if an invalid                              $pathtofile was passed</li>
+				<li><span class="field">uses:</span> <a href="#methodhuman_readable_filesize">directory_info::human_readable_filesize()</a> - to convert the filesize to a human readable string</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filesize">directory_info::get_filesize()</a> - to retrieve the filesize</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			get_human_readable_filesize
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_human_readable_file_permissions" id="get_human_readable_file_permissions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_human_readable_file_permissions</span> (line <span class="line-number">917</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a human readable file permission string for a file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> file permission string or false if an invalid $pathtofile was passed</li>
+				<li><span class="field">uses:</span> <a href="#methodvalid_pathtofile">directory_info::valid_pathtofile()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.fileperms">http://www.php.net/function.fileperms</a></li>
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			get_human_readable_file_permissions
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_human_readable_lastacc" id="get_human_readable_lastacc"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_human_readable_lastacc</span> (line <span class="line-number">861</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the last access timestamp of a file in a human readable format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> human readable date/time string or false if an invalid                              $pathtofile was passed</li>
+				<li><span class="field">uses:</span> <a href="#var$datetime_format">directory_info::$datetime_format</a> - as a default date/time format if no format was passed</li>
+				<li><span class="field">uses:</span> <a href="#methodget_lastacc_unixts">directory_info::get_lastacc_unixts()</a> - to retrieve the last access unix timestamp</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			get_human_readable_lastacc
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$datetime_format</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$datetime_format</span><span class="var-description">: [optional]</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_human_readable_lastmod" id="get_human_readable_lastmod"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_human_readable_lastmod</span> (line <span class="line-number">827</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the last modified timestamp of a file in a human readable format</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> human readable date/time string or false if an invalid                              $pathtofile was passed</li>
+				<li><span class="field">uses:</span> <a href="#var$datetime_format">directory_info::$datetime_format</a> - as a default date/time format if no format was passed</li>
+				<li><span class="field">uses:</span> <a href="#methodget_lastmod_unixts">directory_info::get_lastmod_unixts()</a> - to retrieve the last modified unix timestamp</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			get_human_readable_lastmod
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$datetime_format</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$datetime_format</span><span class="var-description">: [optional]</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_lastacc_unixts" id="get_lastacc_unixts"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_lastacc_unixts</span> (line <span class="line-number">844</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the last access unix timestamp for a file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> unix timestamp or false if an invalid $pathtofile was passed</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_accessed_since">directory_info::get_files_accessed_since()</a> - to get the last access unix timestamp for each file to test</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_accessed_before">directory_info::get_files_accessed_before()</a> - to get the last access unix timestamp for each file to test</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_lastacc">directory_info::get_human_readable_lastacc()</a> - to retrieve the last access unix timestamp</li>
+				<li><span class="field">uses:</span> <a href="#methodvalid_pathtofile">directory_info::valid_pathtofile()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.fileatime">http://www.php.net/function.fileatime</a></li>
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int|false</span>
+		<span class="method-name">
+			get_lastacc_unixts
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_lastmod_unixts" id="get_lastmod_unixts"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_lastmod_unixts</span> (line <span class="line-number">810</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the last modified unix timestamp for a file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> unix timestamp or false if an invalid $pathtofile was passed</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_modified_since">directory_info::get_files_modified_since()</a> - to get the last modified unix timestamp for each file to test</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_files_modified_before">directory_info::get_files_modified_before()</a> - to get the last modified unix timestamp for each file to test</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_most_recent_file">directory_info::get_most_recent_file()</a> - to get the last modified unix timestamp for each file to test</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_lastmod">directory_info::get_human_readable_lastmod()</a> - to retrieve the last modified unix timestamp</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.filemtime">http://www.php.net/function.filemtime</a></li>
+				<li><span class="field">uses:</span> <a href="#methodvalid_pathtofile">directory_info::valid_pathtofile()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int|false</span>
+		<span class="method-name">
+			get_lastmod_unixts
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_mime_content_type" id="get_mime_content_type"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_mime_content_type</span> (line <span class="line-number">895</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the mime content type of a file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> mimetype string or false if an invalid $pathtofile was passed</li>
+				<li><span class="field">usedby:</span> <a href="#methodcheck_file_mimetype">directory_info::check_file_mimetype()</a> - to retrieve the file mimetype</li>
+				<li><span class="field">uses:</span> <a href="#methodvalid_pathtofile">directory_info::valid_pathtofile()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.mime-content-type">http://www.php.net/function.mime-content-type</a></li>
+				<li><span class="field">author:</span> keczerad at poczta dot fm - 30-Aug-2006 10:38</li>
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			get_mime_content_type
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_most_recent_file" id="get_most_recent_file"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_most_recent_file</span> (line <span class="line-number">1288</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the filename and last_modified date of the most recently modified file</p>
+<p class="description"><p>Inspired by a comment from wookie at at no-way dot org - 14-Sep-2003 11:17</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array with two key-value sets:                      'filename' =&gt; filename of most recent file                      'last_modified'    =&gt; last modified unix timestamp of the file</li>
+				<li><span class="field">uses:</span> <a href="#methodget_lastmod_unixts">directory_info::get_lastmod_unixts()</a> - to get the last modified unix timestamp for each file to test</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.filemtime">http://www.php.net/function.filemtime</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_most_recent_file
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be used if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_sorted_dirlist" id="get_sorted_dirlist"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_sorted_dirlist</span> (line <span class="line-number">1255</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a sorted (sub-)directory list</p>
+<p class="description"><p><ul><li>Mainly useful for reverse sorting as the normal dirlist is already sorted in
+ 		ascending order</li><li>Defaults to <em>ascending</em> sort order</li><li>To sort descendingly, set $sort_asc to <em>false</em></li><li>The list sorting will always use case-insensitive natural sort order</li><li>Retrieving a sorted list will not affect the order of the class 'remembered' dirlist</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> sorted array of (sub-)directory names</li>
+				<li><span class="field">uses:</span> <a href="#methodget_dir_list">directory_info::get_dir_list()</a> - to retrieve the directory list</li>
+				<li><span class="field">see:</span> get_filelist()    for more information on retrieving an earlier created list</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.natcasesort">http://www.php.net/function.natcasesort</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_sorted_dirlist
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$sort_asc</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$sort_asc</span><span class="var-description">: [optional]    set to false for reverse / descending sorted list</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on directories in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_sorted_filelist" id="get_sorted_filelist"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_sorted_filelist</span> (line <span class="line-number">1221</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve a sorted filelist</p>
+<p class="description"><p><ul><li>Mainly useful for reverse sorting as the normal filelist is already sorted in
+ 		ascending order</li><li>Defaults to <em>ascending</em> sort order</li><li>To sort descendingly, set $sort_asc to <em>false</em></li><li>The list sorting will always use case-insensitive natural sort order</li><li>Retrieving a sorted list will not affect the order of the class 'remembered' filelists</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> sorted array of filenames</li>
+				<li><span class="field">uses:</span> <a href="#methodget_filelist">directory_info::get_filelist()</a> - to retrieve the requested filelist - refer to this method for
+                                     more information on retrieving listings already created</li>
+				<li><span class="field">link:</span> <a href="http://www.php.net/function.natcasesort">http://www.php.net/function.natcasesort</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_sorted_filelist
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$sort_asc</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$use_selection</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span> = <span class="var-default">null</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$sort_asc</span><span class="var-description">: [optional]    set to false for reverse / descending sorted list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$use_selection</span><span class="var-description">: [optional]    whether or not the last made selection should                                      be returned if available</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span><span class="var-description">: [optional]    path to the directory for which to get the list</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$recursive</span><span class="var-description">: [optional]    whether to retrieve information on files in                                      subdirectories</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodhuman_readable_filesize" id="human_readable_filesize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">human_readable_filesize</span> (line <span class="line-number">778</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a human readable file size string</p>
+<p class="description"><p><ul><li>Rounds bytes and kilobytes to the nearest integer</li><li>Rounds anything else to one digit behind the decimal point</li><li>Returns <em>false</em> is the passed parameter is not an integer or a numeric string</li></ul>  Examples:<br />  the integer <em>1080</em> becomes the string <em>1 kB</em><br />  the integer <em>3000000</em> becomes the string <em>2.8 MB</em></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> human readable filesize string                              or false if the passed variable was not an integer</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_dirsize">directory_info::get_human_readable_dirsize()</a> - to convert the size to a human readable string</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_filesize">directory_info::get_human_readable_filesize()</a> - to convert the filesize to a human readable string</li>
+				<li><span class="field">uses:</span> $byte_suffix_count</li>
+				<li><span class="field">uses:</span> $byte_suffixes - for the byte suffixes</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|false</span>
+		<span class="method-name">
+			human_readable_filesize
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$filesize</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$filesize</span><span class="var-description">: filesize in bytes</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_datetime_format" id="set_datetime_format"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_datetime_format</span> (line <span class="line-number">443</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change the <a href="#var$datetime_format">$datetime_format</a> default</p>
+<p class="description"><p><ul><li>Refer to <a href="#var$datetime_format">$datetime_format</a> for information on valid formats for the variable</li><li>Returns boolean true / false to indicate whether the default was changed succesfully</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="#var$datetime_format">directory_info::$datetime_format</a> - to store new default</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			set_datetime_format
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$datetime_format</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$datetime_format</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_default_exts" id="set_default_exts"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_default_exts</span> (line <span class="line-number">389</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change the <a href="#var$exts">$exts</a> default</p>
+<p class="description"><p><ul><li>Refer to <a href="#var$exts">$exts</a> for information on valid formats for the variable</li><li>Returns boolean true / false to indicate whether the default was changed succesfully</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="#var$exts">directory_info::$exts</a> - to store new default</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			set_default_exts
+		</span>
+					(<span class="var-type">array|string</span>&nbsp;<span class="var-name">$exts</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array|string</span>
+				<span class="var-name">$exts</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_default_mimetypes" id="set_default_mimetypes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_default_mimetypes</span> (line <span class="line-number">408</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change the <a href="#var$mimetypes">$mimetypes</a> default</p>
+<p class="description"><p><ul><li>Refer to <a href="#var$mimetypes">$mimetypes</a> for information on valid formats for the variable</li><li>Returns boolean true / false to indicate whether the default was changed succesfully</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="#var$mimetypes">directory_info::$mimetypes</a> - to store new default</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			set_default_mimetypes
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$mimetypes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$mimetypes</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_default_path" id="set_default_path"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_default_path</span> (line <span class="line-number">355</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change the <a href="#var$pathtodir">$pathtodir</a> default</p>
+<p class="description"><p><ul><li>Refer to <a href="#var$pathtodir">$pathtodir</a> for information on valid formats for the variable</li><li>Returns boolean true / false to indicate whether the default was changed succesfully</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="#var$pathtodir">directory_info::$pathtodir</a> - to store new default</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			set_default_path
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtodir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtodir</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_safe_exts" id="set_safe_exts"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_safe_exts</span> (line <span class="line-number">372</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change the <a href="#var$safe_exts">$safe_exts</a> default</p>
+<p class="description"><p><ul><li>Refer to <a href="#var$safe_exts">$safe_exts</a> for information on valid formats for the variable</li><li>Returns boolean true / false to indicate whether the default was changed succesfully</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="#var$safe_exts">directory_info::$safe_exts</a> - to store new default</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			set_safe_exts
+		</span>
+					(<span class="var-type">bool</span>&nbsp;<span class="var-name">$safe_exts</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$safe_exts</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_strict" id="set_strict"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_strict</span> (line <span class="line-number">426</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Change the <a href="#var$strict">$strict</a> default</p>
+<p class="description"><p><ul><li>Refer to <a href="#var$strict">$strict</a> for information on valid formats for the variable</li><li>Returns boolean true / false to indicate whether the default was changed succesfully</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="#var$strict">directory_info::$strict</a> - to store new default</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			set_strict
+		</span>
+					(<span class="var-type">bool</span>&nbsp;<span class="var-name">$strict</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$strict</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodvalid_pathtofile" id="valid_pathtofile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">valid_pathtofile</span> (line <span class="line-number">587</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clears the file stat cache and checks whether the passed $pathtofile is a valid path to a file</p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="#methodget_mime_content_type">directory_info::get_mime_content_type()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_human_readable_file_permissions">directory_info::get_human_readable_file_permissions()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_file_owner">directory_info::get_file_owner()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_lastacc_unixts">directory_info::get_lastacc_unixts()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_filesize">directory_info::get_filesize()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">usedby:</span> <a href="#methodget_lastmod_unixts">directory_info::get_lastmod_unixts()</a> - to check whether the passed parameter is a file</li>
+				<li><span class="field">usedby:</span> <a href="#methodcheck_file_mimetype">directory_info::check_file_mimetype()</a> - to check whether the $pathtofile parameter is valid</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			valid_pathtofile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathtofile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathtofile</span>			</li>
+				</ul>
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 02 Sep 2006 09:15:19 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>
