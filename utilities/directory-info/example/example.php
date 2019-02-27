@@ -51,36 +51,14 @@
 
 <link type="text/css" rel="stylesheet" href="http://www.adviesenzo.nl/stijl.css" />
 
-<script type="text/javascript" src="../../js/tabber.js" />
-
-<script type="text/javascript">
-
-   var disqus_developer = 1; 
-
-</script> 
-
 </head>
 <body>
 
-<div id="primary">
-<ul class="links"><li class="menu-285 active-trail first active"><a href="/" title="" class="active">Home</a></li>
-<li class="menu-782"><a href="/content/about-jim-applegate" title="">About Me</a></li>
-<li class="menu-446 last"><a href="/content/celestial-seasonings" title="Celestial Seasonings">Portfolio</a></li>
-</ul>
-</div>
+<div id="container">
 
-<div id="page"><div id="page-inner">
+<header>
 
    <a name="top" id="navigation-top"></a>
-
-   <div id="header"><div id="header-inner" class="clear-block">
-
-      
-      <h1 id="site-name"><a href="/" title="Home" rel="home">World that Works                </a></h1>
-                      
-      <div id="site-slogan">A world view from the mind of Jim Applegate</div>  
-      
-   </div></div> <!-- /#header-inner, /#header -->
 
 <div class="head">
 	<a href="http://www.adviesenzo.nl/index.html" title="Visit the homepage of Advies en zo"><img src="http://www.adviesenzo.nl/images/logo_dpi120.gif" width="411" height="80" alt="Logo Advies en zo, Meedenken en -doen" /></a>

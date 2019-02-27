@@ -6,8 +6,8 @@
 // Subversion commands
 //
 // mkdir(dirname)  -->  svn mkdir dirname
-// svn rename oldname newname
-// svn move source destination
+// svn rename oldname newname ==> git mv source destination
+// svn move source destination ==> git mv source destination
 //
 
 class PatternBook
@@ -83,7 +83,7 @@ class PatternBook
       
       // assemble the new full filename
       $path = str_replace($this->base_dir, '', $old_filename);
-      $path_array = split("/", $path);
+      $path_array = explode ("/", $path);
       $prefix = substr($path_array[2], 0, 4);
       $new_filename = $this->base_dir.$path_array[0]."/". 
                       $path_array[1]."/".$prefix.$new_basename.".html";
@@ -92,7 +92,8 @@ class PatternBook
       echo "new filename: ".$new_filename."\n";
 
       // change the filename to the new name
-      if ( ! $this->dry_run) exec('svn rename '.$old_filename.' '.$new_filename);
+//      if ( ! $this->dry_run) exec('svn rename '.$old_filename.' '.$new_filename);
+      if ( ! $this->dry_run) exec('git mv '.$old_filename.' '.$new_filename);
       $this->_log('Renamed file: '.$old_filename.' --> '.$new_filename);
       
       // get a list of all filenames, including the patterns.php 
@@ -119,7 +120,7 @@ class PatternBook
 
       for ($i=0; $i<count($dirobj->filelist_selection); $i++)
       {
-         $path_array = split("/", $dirobj->filelist_selection[$i]);
+         $path_array = explode("/", $dirobj->filelist_selection[$i]);
          if ( ! in_array($path_array[0], $this->exclude_dir) && $path_array[2] != "" && $path_array[2] != "index.html")
          {
             $basename = str_replace(".html","", substr($path_array[2], 4));
@@ -146,13 +147,13 @@ class PatternBook
 
       for ($i=0; $i<count($dirobj->dirlist); $i++)
       {
-         $path_array = split("/", $dirobj->dirlist[$i]);
+         $path_array = explode("/", $dirobj->dirlist[$i]);
          if ( ! in_array($path_array[0], $this->exclude_dir))
          {
             $this->old_dirlist[$dirobj->dirlist[$i]] = $dirobj->dirlist[$i];
          }
       }
-//      print_r($this->old_dirlist);
+      print_r($this->old_dirlist);
       return $this->old_dirlist;
    }
    // END get_old_dirlist()
@@ -171,8 +172,8 @@ class PatternBook
          $this->sections[$i]['title'] = $this->_build_title($this->sections[$i]['name']);
          if ( ! file_exists($section_dir))
          {
-//            if ( ! $this->dry_run) mkdir($section_dir);
-            if ( ! $this->dry_run) exec('svn mkdir '.$section_dir);
+//            if ( ! $this->dry_run) exec('svn mkdir '.$section_dir);
+            if ( ! $this->dry_run) mkdir($section_dir);
             $this->created_notes[] = "The section directory ".$section_dir." was created.";
          }
          else
@@ -188,8 +189,8 @@ class PatternBook
          $this->groups[$i]['dir'] = $group_dir;
          if ( ! file_exists($group_dir))
          {
-//            if ( ! $this->dry_run) mkdir($group_dir);
-            if ( ! $this->dry_run) exec('svn mkdir '.$group_dir);
+//            if ( ! $this->dry_run) exec('svn mkdir '.$group_dir);
+            if ( ! $this->dry_run) mkdir($group_dir);
             $this->created_notes[] = "The group directory ".$group_dir." was created.";
          }
          else
@@ -256,7 +257,8 @@ class PatternBook
             if ($new_path != $this->old_filelist[$basename])
             {
 //               if ( ! $this->dry_run) rename($this->old_filelist[$basename], $new_path);
-               if ( ! $this->dry_run) exec('svn rename '.$this->old_filelist[$basename].' '.$new_path);
+//               if ( ! $this->dry_run) exec('svn rename '.$this->old_filelist[$basename].' '.$new_path);
+               if ( ! $this->dry_run) exec('git mv '.$this->old_filelist[$basename].' '.$new_path);
                $this->changed++;
                $this->changed_notes[] = "The file ".$this->old_filelist[$basename]." was moved to ".$new_path.".";
                
@@ -284,7 +286,8 @@ class PatternBook
             $new_path = $this->base_dir . "deleted/".$key."-".$num.".html";
          }
 //         if ( ! $this->dry_run) rename($file, $new_path);
-         if ( ! $this->dry_run) exec('svn rename '.$file.' '.$new_path);
+//         if ( ! $this->dry_run) exec('svn rename '.$file.' '.$new_path);
+         if ( ! $this->dry_run) exec('git mv '.$file.' '.$new_path);
          $this->warnings[] = "WARNING: ".$file." was deleted, but there may still be links to the file.";
          $this->deleted_notes[] = "The file ".$file." was moved to the deleted folder:".$new_path;
       }
@@ -295,10 +298,11 @@ class PatternBook
       //    deleting them so Subversion can track their history.
       foreach ($this->old_dirlist as $dir)
       {
-         $path_array = split("/", $dir);
+         $path_array = explode("/", $dir);
          if ($path_array[1] != "")
          {
-            if ( ! $this->dry_run) exec('svn delete ' . $this->base_dir . $dir);
+//            if ( ! $this->dry_run) exec('svn delete ' . $this->base_dir . $dir);
+            if ( ! $this->dry_run) exec('git rm ' . $this->base_dir . $dir);
             $this->deleted_notes[] = "The directory ".$this->base_dir . $dir." was removed. Note: it will not go away until the changes are committed to the repository.";
             unset($this->old_dirlist[$dir]);
          }
@@ -312,11 +316,13 @@ class PatternBook
          if (file_exists($index))
          {
 //            if ( ! $this->dry_run) rename($index, $new_index);
-            if ( ! $this->dry_run) exec('svn move '.$index.' '.$new_index);
+//            if ( ! $this->dry_run) exec('svn move '.$index.' '.$new_index);
+            if ( ! $this->dry_run) exec('git mv '.$index.' '.$new_index);
             $this->warnings[] = "Moved ".$index." to deleted folder: ".$new_index;
             $this->deleted_notes[] = "The file ".$index." was moved to the deleted folder and renamed it ".$new_index.".";
          }
-         if ( ! $this->dry_run) exec('svn delete ' . $this->base_dir . $dir);
+//         if ( ! $this->dry_run) exec('svn delete ' . $this->base_dir . $dir);
+         if ( ! $this->dry_run) exec('git rm ' . $this->base_dir . $dir);
          $this->deleted_notes[] = "The directory ".$this->base_dir . $dir." was removed. Note: it will not go away until the changes are committed to the repository.";
       }
 
@@ -348,19 +354,24 @@ class PatternBook
             $subject = $this->search_file($files[$i]['path'], $subject, $search, $replace, "heading");
 
             // replace number & group in the menu
-            $search = '/<a href="..\/..\/index.html">World That Works<\/a> '. 
-                      '&nbsp;&#8250;&nbsp; <a href="..\/..\/patterns.html">Patterns<\/a> '. 
-                      '&nbsp;&#8250;&nbsp; <a href="..\/index.html">(.*)<\/a> '.
-                      '&nbsp;&#8250;&nbsp; <a href="index.html">(.*)<\/a> '.
-                      '&nbsp;&#8250;&nbsp; (.*)\((.*)\)/U';
-            $replace = '<a href="../../index.html">Cover Page</a> '.
-                       '&nbsp;&#8250;&nbsp; <a href="../../patterns.html">Patterns</a> '.
-                       '&nbsp;&#8250;&nbsp; <a href="../index.html">' . 
-                       $this->sections[$this->groups_rev[$files[$i]['group']]['section']]['title'] . 
-                       '</a> &nbsp;&#8250;&nbsp; <a href="index.html">' . 
-                       $this->groups_rev[$files[$i]['group']]['title'] . 
-                       '</a> &nbsp;&#8250;&nbsp; $3(' . 
-                       $files[$i]['id']. ')';
+            $search =  '#<nav aria-label="breadcrumb">\s*'.
+                       '<ol class="breadcrumb">\s*'.
+                       '<li class="breadcrumb-item"><a href="\.\./\.\./index.html">Cover Page</a></li>\s*'.
+                       '<li class="breadcrumb-item"><a href="\.\./\.\./patterns.html">Patterns</a></li>\s*'.
+                       '<li class="breadcrumb-item"><a href="\.\./index.html">(.*)</a></li>\s*'.
+                       '<li class="breadcrumb-item"><a href="index.html">(.*)</a></li>\s*'.
+                       '<li class="breadcrumb-item active" aria-current="page">(.*)\((.*)\)</li>\s*'.
+                       '</ol>\s*'.
+                       '</nav>#Us';                      
+            $replace = '<nav aria-label="breadcrumb">'."\n".
+                       '  <ol class="breadcrumb">'."\n".
+                       '    <li class="breadcrumb-item"><a href="../../index.html">Cover Page</a></li>'."\n".
+                       '    <li class="breadcrumb-item"><a href="../../patterns.html">Patterns</a></li>'."\n".
+                       '    <li class="breadcrumb-item"><a href="../index.html">' . $this->sections[$this->groups_rev[$files[$i]['group']]['section']]['title'] . '</a></li>'."\n".
+                       '    <li class="breadcrumb-item"><a href="index.html">' . $this->groups_rev[$files[$i]['group']]['title'] . '</a></li>'."\n".
+                       '    <li class="breadcrumb-item active" aria-current="page">$3(' . $files[$i]['id'] . ')</li>'."\n".
+                       '  </ol>'."\n".
+                       '</nav>'."\n";
             $subject = $this->search_file($files[$i]['path'], $subject, $search, $replace, "menu");
 
             // update pattern links in pattern files
@@ -568,7 +579,8 @@ class PatternBook
          $fh = fopen($file, 'w') or die($php_errormsg);
          fwrite($fh, $template);
          fclose($fh) or die($php_errormsg);
-         exec('svn add ' . $file);
+//         exec('svn add ' . $file);
+         exec('git add ' . $file);
       }
       
       $this->created_notes[] = "The pattern file ".$file." was created.";
@@ -684,7 +696,8 @@ class PatternBook
                   fwrite($fh, $group_toc);
                   fclose($fh) or die($php_errormsg);
                   if ( ! $exists ) {
-                     exec('svn add '.$this->groups[$j]['dir']."index.html");
+//                     exec('svn add '.$this->groups[$j]['dir']."index.html");
+                     exec('git add '.$this->groups[$j]['dir']."index.html");
                   }
                }
             }

@@ -15,49 +15,54 @@
 <meta name='author' content='Jim Applegate' />
 <meta name='description' content='World That Works: a pattern language' />
 
-<script type="text/javascript" src="../../js/tabber.js" />
-
-<script type="text/javascript">
-
-   var disqus_developer = 1; 
-
-</script> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
-<div id="primary">
-<ul class="links"><li class="menu-285 active-trail first active"><a href="/" title="" class="active">Home</a></li>
-<li class="menu-782"><a href="/content/about-jim-applegate" title="">About Me</a></li>
-<li class="menu-446 last"><a href="/content/celestial-seasonings" title="Celestial Seasonings">Portfolio</a></li>
-</ul>
-</div>
+<div id="container">
 
-<div id="page"><div id="page-inner">
+<header>
 
    <a name="top" id="navigation-top"></a>
 
-   <div id="header"><div id="header-inner" class="clear-block">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">World That Works: A Pattern Language</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/index.html">The Book</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-      
-      <h1 id="site-name"><a href="/" title="Home" rel="home">World that Works                </a></h1>
-                      
-      <div id="site-slogan">A world view from the mind of Jim Applegate</div>  
-      
-   </div></div> <!-- /#header-inner, /#header -->
 
-<div id="masthead">
-<span> World That Works: A Pattern Language</span> &mdash; <span style="color:red; font-weight:normal;">Working DRAFT</span>
-<br /><a href="../../index.html">Cover Page</a> &nbsp;&#8250;&nbsp; <a href="../../patterns.html">Patterns</a> &nbsp;&#8250;&nbsp; <a href="../index.html">Comprehensive Thinking</a> &nbsp;&#8250;&nbsp; <a href="index.html">Planning</a> &nbsp;&#8250;&nbsp; Critical Path (151)
-</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../../index.html">Cover Page</a></li>
+    <li class="breadcrumb-item"><a href="../../patterns.html">Patterns</a></li>
+    <li class="breadcrumb-item"><a href="../index.html">Comprehensive Thinking</a></li>
+    <li class="breadcrumb-item"><a href="index.html">Planning</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Critical Path (151)</li>
+  </ol>
+</nav>
 
-<!-- START CHAPTER -->
-<div class="chapter">
+</header>
+
+<article>
+
 
 <h1><span class="num">143</span> Critical Path</h1>
-
-   <div class="tabber">
-   <div class="tabbertab" title="Pattern">
 
 <div class="context">
 <p><span class="editor">insert context statement.</span></p>
@@ -91,52 +96,23 @@
 <p>A big part of this pattern is getting things in order -- <a href="../../2-comprehensive-thinking/33-planning/144-first-things-first.html" class="pattern-name">First Things First (144)</a>.</p>
 </div>
 
-   </div> <!-- tabbertab -->
-   <div class="tabbertab" title="Footnotes">
-
 <div class="footnotes">
 </div> <!-- footnotes -->
-
-   </div> <!-- tabbertab -->
-   <div class="tabbertab" title="Counter Arguments">
 
 <div class="counter">
 </div> <!-- counter -->
 
-   </div> <!-- tabbertab -->
-   <div class="tabbertab" title="Note Pad">
-
 <div class="notes">
 </div> <!-- notes -->
 
-   </div> <!-- tabbertab -->
-   </div> <!-- tabber -->
-
-<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/worldthatworks/embed.js"></script><noscript><a href="http://worldthatworks.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</article>
 
 <div id="footer">
-&copy; 2006-2011&nbsp; James B. Applegate, Jr. All Rights Reserved.
+
+&copy; 2006-2019&nbsp; James B. Applegate, Jr. All Rights Reserved.
 </div>
 
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-		var links = document.getElementsByTagName('a');
-		var query = '?';
-		for(var i = 0; i < links.length; i++) {
-			if(links[i].href.indexOf('#disqus_thread') >= 0) {
-				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-			}
-		}
-		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/worldthatworks/get_num_replies.js' + query + '"></' + 'script>');
-	})();
-//]]>
-</script>
-
-<!-- END CHAPTER -->
-</div>
-
-  </div></div> <!-- /#page-inner, /#page -->
+  </div> <!-- /#container -->
 
 
 </body>
