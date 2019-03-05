@@ -3,11 +3,9 @@
 // To find incomplete items, search for TODO:
 
 //
-// Subversion commands
+// This class is designed to work with Git as changes are made so that the repository
+// maintenance isn't too crazy when the structure of the book changes significantly.
 //
-// mkdir(dirname)  -->  svn mkdir dirname
-// svn rename oldname newname ==> git mv source destination
-// svn move source destination ==> git mv source destination
 //
 
 class PatternBook
