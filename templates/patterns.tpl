@@ -34,6 +34,13 @@
 <br /><a href="index.html">Cover Page</a> &nbsp;&#8250;&nbsp; Patterns
 </div>
 
+<nav class="pager">
+  <div>
+    <a class="btn btn-outline-dark btn-sm float-left" href="#">Previous</a>
+    <a class="btn btn-outline-dark btn-sm float-right" href="#">Next</a>
+  </div>
+</nav>
+
 </header>
 
 <article>

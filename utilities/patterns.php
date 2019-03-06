@@ -862,7 +862,7 @@ $p->patterns = $patterns;
 $p->log_messages = true;
 $p->verbose = false;
 
-$p->dry_run = FALSE;
+$p->dry_run = TRUE;
 
 $p->process_pattern_book();
 

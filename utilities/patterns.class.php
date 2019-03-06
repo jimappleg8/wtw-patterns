@@ -151,7 +151,7 @@ class PatternBook
             $this->old_dirlist[$dirobj->dirlist[$i]] = $dirobj->dirlist[$i];
          }
       }
-      print_r($this->old_dirlist);
+//      print_r($this->old_dirlist);
       return $this->old_dirlist;
    }
    // END get_old_dirlist()
@@ -371,7 +371,36 @@ class PatternBook
                        '  </ol>'."\n".
                        '</nav>'."\n";
             $subject = $this->search_file($files[$i]['path'], $subject, $search, $replace, "menu");
-
+            
+            // replace previous and next links
+            if (isset($files[$i-1])) {
+              $previous = '    <a class="btn btn-outline-dark btn-sm float-left" href="'.$files[$i-1]['path'].'">&lt; '.$files[$i-1]['name'].' (' . $files[$i-1]['id'] . ')</a>';
+            }
+            else
+            {
+              $previous = '    ';
+            }
+            if (isset($files[$i+1])) {
+              $next = '    <a class="btn btn-outline-dark btn-sm float-right" href="'.$files[$i+1]['path'].'">&lt; '.$files[$i+1]['name'].' (' . $files[$i+1]['id'] . ')</a>';
+            }
+            else
+            {
+              $next = '    ';
+            }
+            $search =  '#<nav class="pager">\s*'.
+                       '<div>\s*'.
+                       '<a class="btn btn-outline-dark btn-sm float-left" href="(.*)">(.*)</a>\s*'.
+                       '<a class="btn btn-outline-dark btn-sm float-right" href="(.*)">(.*)</a>\s*'.
+                       '</div>\s*'.
+                       '</nav>#Us';                      
+            $replace = '<nav class="pager">'."\n".
+                       '  <div>'."\n".
+                       $previous."\n".
+                       $next."\n".
+                       '  </div>'."\n".
+                       '</nav>'."\n";
+            $subject = $this->search_file($files[$i]['path'], $subject, $search, $replace, "pager");
+            
             // update pattern links in pattern files
 
             // first, get a list of all pattern links in the file

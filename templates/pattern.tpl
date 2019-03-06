@@ -5,9 +5,6 @@
 
 <title>{title}</title>
 
-<link rel='stylesheet' type='text/css' media='all' href='../../patterns.css' />
-<link rel='stylesheet' type='text/css' media='print' href='../../patterns-print.css' />
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv='expires' content='-1' />
 <meta http-equiv= 'pragma' content='no-cache' />
@@ -19,6 +16,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<link rel='stylesheet' type='text/css' media='all' href='../../patterns.css' />
+<link rel='stylesheet' type='text/css' media='print' href='../../patterns-print.css' />
 
 </head>
 <body>
@@ -48,6 +48,13 @@
 
 
 <div><a href="../../index.html">Cover Page</a> &nbsp;&#8250;&nbsp; <a href="../../patterns.html">Patterns</a> &nbsp;&#8250;&nbsp; <a href="{section_url}">{section}</a> &nbsp;&#8250;&nbsp; <a href="{group_url}">{group}</a> &nbsp;&#8250;&nbsp; {title} ({number})</div>
+
+<nav class="pager">
+  <div>
+    <a class="btn btn-outline-dark btn-sm float-left" href="#">Previous</a>
+    <a class="btn btn-outline-dark btn-sm float-right" href="#">Next</a>
+  </div>
+</nav>
 
 </header>
 
