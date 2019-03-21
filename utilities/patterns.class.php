@@ -374,23 +374,23 @@ class PatternBook
             
             // replace previous and next links
             if (isset($files[$i-1])) {
-              $previous = '    <a class="btn btn-outline-dark btn-sm float-left" href="'.$files[$i-1]['path'].'">&lt; '.$files[$i-1]['name'].' (' . $files[$i-1]['id'] . ')</a>';
+              $previous = '    <a class="btn btn-outline-dark btn-sm float-left" href="../'.$files[$i-1]['path'].'">&lt; '.$files[$i-1]['name'].' (' . $files[$i-1]['id'] . ')</a>';
             }
             else
             {
-              $previous = '    ';
+              $previous = '    <a class="btn btn-outline-dark btn-sm float-left disabled" href="#">&lt; Previous</a>';
             }
             if (isset($files[$i+1])) {
-              $next = '    <a class="btn btn-outline-dark btn-sm float-right" href="'.$files[$i+1]['path'].'">&lt; '.$files[$i+1]['name'].' (' . $files[$i+1]['id'] . ')</a>';
+              $next = '    <a class="btn btn-outline-dark btn-sm float-right" href="../'.$files[$i+1]['path'].'">'.$files[$i+1]['name'].' (' . $files[$i+1]['id'] . ') &gt;</a>';
             }
             else
             {
-              $next = '    ';
+              $next = '    <a class="btn btn-outline-dark btn-sm float-right disabled" href="#">Next &gt;</a>';
             }
             $search =  '#<nav class="pager">\s*'.
                        '<div>\s*'.
-                       '<a class="btn btn-outline-dark btn-sm float-left" href="(.*)">(.*)</a>\s*'.
-                       '<a class="btn btn-outline-dark btn-sm float-right" href="(.*)">(.*)</a>\s*'.
+                       '<a class="btn btn-outline-dark btn-sm float-left( disabled?)" href="(.*)">(.*)</a>\s*'.
+                       '<a class="btn btn-outline-dark btn-sm float-right( disabled?)" href="(.*)">(.*)</a>\s*'.
                        '</div>\s*'.
                        '</nav>#Us';                      
             $replace = '<nav class="pager">'."\n".
@@ -398,7 +398,7 @@ class PatternBook
                        $previous."\n".
                        $next."\n".
                        '  </div>'."\n".
-                       '</nav>'."\n";
+                       '</nav>';
             $subject = $this->search_file($files[$i]['path'], $subject, $search, $replace, "pager");
             
             // update pattern links in pattern files
