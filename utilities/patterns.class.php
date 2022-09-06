@@ -3,8 +3,9 @@
 // To find incomplete items, search for TODO:
 
 //
-// This class is designed to work with Git as changes are made so that the repository
-// maintenance isn't too crazy when the structure of the book changes significantly.
+// This class is designed to work with Git as changes are made 
+// so that the repository maintenance isn't too crazy when the 
+// structure of the book changes significantly.
 //
 //
 
@@ -33,6 +34,7 @@ class PatternBook
    var $log_messages = false;
    var $verbose = false;
    
+   // set this when the instance is called to change it.
    var $dry_run = false;
    
    // --------------------------------------------------------------------
@@ -752,7 +754,7 @@ class PatternBook
    function display_summary()
    {      
       $this->_log("\n===========================================", true);
-      $this->_log(" SUMMARY", true);
+      $this->_log(" SUMMARY - ".date("F j, Y, g:i a"), true);
       if ($this->dry_run)
       {
          $this->_log("===========================================", true);
