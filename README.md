@@ -1,15 +1,15 @@
 # WTW Patterns — Pattern Scripts User Manual
 
-<p>This is a set of scripts that are designed to help build the pattern language book that I am working on. The scripts are designed to manage the most challenging aspect of writing a book like this: the numbering system.</p>
+<p>This is a set of scripts that are designed to help build the pattern language book that I'm working on. The scripts are designed to manage the most challenging aspect of writing a book like this: the numbering system.</p>
 
 
 <h2>Getting a copy of the book</h2>
 
-<p>I have decided to store the book files in a Github repository as a way of simplifying the management of the files. Before I did this, I was always having to make sure that I had the most recent copy of the book in hand before I made changes, and there were often multiple copies that it was difficult to keep track of.</p>
+<p>I've decided to store the book files in a Github repository as a way of simplifying the management of the files. Before I did this, I was always having to make sure that I had the most recent copy of the book in hand before I made changes, and there were often multiple copies that it was difficult to keep track of.</p>
 
 <p>To check out a copy of the book, clone this repository.</p>
 
-<p>Once you have a working copy, you can make type edits and run <samp>pattern.php</samp> and other scripts to update the overall structure of the book. The scripts are designed to work with Subversion, so they will add, move, and delete files using Subversion commands. The instructions below indicate how to add, delete and rename patterns, groups and sections so that the book will retain its numeric integrity.</p>
+<p>Once you have a working copy, you can make type edits and run <samp>pattern.php</samp> and other scripts to update the overall structure of the book. The scripts are designed to work with Git, so they will add, move, and delete files using Git commands. The instructions below indicate how to add, delete and rename patterns, groups and sections so that the book will retain its numeric integrity.</p>
 
 
 <h2>Adding a new pattern</h2>
@@ -33,14 +33,14 @@ $patterns[] = array('name'      => 'First Things First',
 
 <p>Removing a pattern is also easy. You just delete it's record from the patterns array. The <samp>patterns.php</samp> script will detect that the existing pattern file is no longer listed in the patterns array and will move the file into the <samp>/deleted/</samp> folder. That way the contents of the file will not be lost in case you want to add it again later or use the text in another pattern.</p>
 
-<p class="important"><strong>NOTE:</strong> The script does not remove any references to the pattern that was removed. You will need to look at the warnings presented in the summary to find the patterns that have links to the deleted pattern and edit those manually.</p>
+<p><strong>NOTE:</strong> The script does not remove any references to the pattern that was removed. You will need to look at the warnings presented in the summary to find the patterns that have links to the deleted pattern and edit those manually.</p>
 
 
 <!-- ********************************************************** -->
 
 <h2>Renaming a pattern</h2>
 
-<p>There is a renaming script in the works, but for now, renaming a pattern must be done manually. The main patterns script will only work correctly if the pattern names are consistent across the book, so it is important that the renaming be done correctly.</p>
+<p>There is a renaming script in the works, but for now, renaming a pattern must be done manually. The main patterns script will only work correctly if the pattern names are consistent across the book, so it's important that the renaming be done correctly.</p>
 
 <p>There are three places the name must be changed:</p>
 
@@ -71,7 +71,7 @@ $patterns[] = array('name'      => 'Prototyped Capabilities',
                     'group'     => 'reduce-to-practice');  <span style="color:#F00;">&lt;-- CHANGE HERE AS WELL</span>
 </pre>
 
-<p class="important"><strong>NOTE:</strong> After the <samp>patterns.php</samp> script runs, it will appear that the old directory was not deleted properly, but it will be deleted on the next commit by Subversion. Do not delete it manually.</p>
+<p><strong>NOTE:</strong> After the <samp>patterns.php</samp> script runs, it will appear that the old directory was not deleted properly, but it will be deleted on the next commit by Git. Do not delete it manually.</p>
 
 
 <!-- ********************************************************** -->
