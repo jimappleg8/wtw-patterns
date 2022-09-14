@@ -1,26 +1,26 @@
-# Pattern Scripts User Manual
+# WTW Patterns — Pattern Scripts User Manual
 
-This is a set of scripts that are designed to help build the pattern language book that I am working on. The scripts are designed to manage the most challenging aspect of writing a book like this: the numbering system.
-
-
-## Getting a copy of the book
-
-I have decided to store the book files in a Github repository as a way of simplifying the management of the files. Before I did this, I was always having to make sure that I had the most recent copy of the book in hand before I made changes, and there were often multiple copies that it was difficult to keep track of.
-
-To check out a copy of the book, clone this repository.
-
-Once you have a working copy, you can make type edits and run `pattern.php` and other scripts to update the overall structure of the book. The scripts are designed to work with Subversion, so they will add, move, and delete files using Subversion commands. The instructions below indicate how to add, delete and rename patterns, groups and sections so that the book will retain its numeric integrity.
+<p>This is a set of scripts that are designed to help build the pattern language book that I am working on. The scripts are designed to manage the most challenging aspect of writing a book like this: the numbering system.</p>
 
 
-## Adding a new pattern
+<h2>Getting a copy of the book</h2>
 
-Adding a new pattern is simple. You just add a record to the patterns array in the `patterns.php` file. A record looks like this
+<p>I have decided to store the book files in a Github repository as a way of simplifying the management of the files. Before I did this, I was always having to make sure that I had the most recent copy of the book in hand before I made changes, and there were often multiple copies that it was difficult to keep track of.</p>
 
-`
+<p>To check out a copy of the book, clone this repository.</p>
+
+<p>Once you have a working copy, you can make type edits and run <samp>pattern.php</samp> and other scripts to update the overall structure of the book. The scripts are designed to work with Subversion, so they will add, move, and delete files using Subversion commands. The instructions below indicate how to add, delete and rename patterns, groups and sections so that the book will retain its numeric integrity.</p>
+
+
+<h2>Adding a new pattern</h2>
+
+<p>Adding a new pattern is simple. You just add a record to the patterns array in the <samp>patterns.php</samp> file. A record looks like this</p>
+
+<pre>
 $patterns[] = array('name'      => 'First Things First',
                     'certainty' => '',
                     'group'     => 'planning');
-`
+</pre>
 
 <p>The elements are pretty self-explanatory. The <var>name</var> is the official pattern name as you would like it to appear everywhere. This text is used everywhere to create links and the table of contents. The <var>certainty</var> is an indicator of how confident that I am that the pattern is valid. No asterisks indicates little confidence, one asterisk indicates a fair amount of confidence, and two asterisks indicate a strong confidence. And finally, the <var>group</var> indicates the group name this pattern is part of.</p>
 
